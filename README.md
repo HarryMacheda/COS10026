@@ -14,5 +14,19 @@ Click on the Source Control Tab (side menu)
 Enter a short message describing your changes
 Commit changes (click commit button)
 
+# Push to server
+click publish 
+
+# Creating pull request 
+Create a pull request
+Go to github
+On the home bag click branches
+Click on the branch you wish to merge
+Click Compare and create pull request 
+Add a short description of your chnages for the reviewer
+Click Create pull request
+
+
+ 
 
 
