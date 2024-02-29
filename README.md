@@ -3,11 +3,11 @@
 # Merging changes process
 
 # Create a branch
-Click on the Source Control Tab (sid emenu)
+Click on the Source Control Tab (side menu)
 Click the three dots
 Click Branch > Create Branch
 Name the Branch 
-Run [git branch to ensure the branch you created is checked out - it will be green]
+Run [git branch] in the terminal to ensure the branch you created is checked out - it will be green
 
 # Commit changes
 Click on the Source Control Tab (side menu)
