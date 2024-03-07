@@ -1,0 +1,46 @@
+/*Common styling for button elements*/
+.button {
+    border-radius: 0px;
+    border: 0; 
+}
+/*theme stylings*/
+/*light theme*/
+.theme-light.button{
+    background-color: white;
+    box-shadow: 3px 1px 2px rgb(190, 190, 190);
+    color: black;
+}
+
+/*Common styling for submit buttons elements*/
+.submit {
+    background-color: white;
+}
+
+/*Common styling for headings*/
+.heading {
+    background-color: white;
+}
+/*Common styling for paragraphs*/
+.paragraph {
+    background-color: white;
+}
+/*Common styling for text inputs*/
+.inputtext {
+    background-color: white;
+}
+/*Common styling for date inputs*/
+.inputdate {
+    background-color: white;
+}
+/*Common styling for checkboxes*/
+.inputcheckbox {
+    background-color: white;
+}
+/*Common styling for radio buttons*/
+.inputradio {
+    background-color: white;
+}
+/*Common styling for input lists*/
+.inputList {
+    background-color: white;
+}
