@@ -57,6 +57,7 @@
 /*theme stylings*/
 /*light theme*/
 .theme-light.inputtext{
+    background-color:  var(--theme-light-dark);
     border-color: var(--theme-light-main);
     color: var(--theme-light-main);
 }
