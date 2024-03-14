@@ -1,0 +1,11 @@
+require ldap-user s103603101
+require ldap-group cn=it_feenix_admin_convenor,ou=Group,ou=general,dc=feenix,dc=swin,dc=edu,dc=au
+require ldap-group cn=it_sdteam_convenor,ou=Group,ou=general,dc=feenix,dc=swin,dc=edu,dc=au
+require ldap-group cn=cos10026_convenor,ou=Group,ou=general,dc=feenix,dc=swin,dc=edu,dc=au
+require ldap-group cn=cos10026_tutor,ou=Group,ou=general,dc=feenix,dc=swin,dc=edu,dc=au
+
+Options +Indexes
+
+SSLRequireSSL
+
+ErrorDocument 404 https://mercury.swin.edu.au/cos10026/s103603101/project/notfound.html
