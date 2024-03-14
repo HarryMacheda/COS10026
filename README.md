@@ -1,10 +1,9 @@
 # COS10026
 # Project Information
-Colour palette: https://coolors.co/caf0f8-73a7c9-4882b1-1c5d99-212f65-1a0130
+Colour palette: 
 
-# Compant name
-Bar
-Name: Infinite Horizons
+# CompanY name
+
 
 # Merging changes process
 
