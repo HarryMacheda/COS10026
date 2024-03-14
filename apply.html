@@ -1,37 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="Index.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="apply.css">
+        <title>Job Application</title>
     </head>
     <body>
-        <h1>Apply Here</h1>
-        <form action="https://mercury.swin.edu.au/it000000/formtest.php">
-            <label for="reference">Job reference number: </label>
-            <input type="number" id="reference" name="reference"><br><br>
-            <label for="firstname">First name: </label>
-            <input type="text" id="firstname" name="firstname"><br><br>
-            <label for="surname">Surname: </label>
-            <input type="text" id="surname" name="surname"><br><br>
-            <input type="submit" value="Apply">
-            <label for="dob">Date of birth: </label>
-            <input type="date" id="dob" name="dob"><br><br>
-            <label for="Gender"></label>
-            {radio input}
-            <label for="address">Address: </label>
-            <input type="text" id="address" name="address"><br><br>
-            <label for="suburb">Suburb/Town: </label>
-            <input type="text" id="suburb" name="suburb"><br><br>
-            <label for="state">State</label>
-            <input type="text" id="state" name="state"><br><br>
-            <label for="postcode">Postcode: </label>
-            <input type="number" id="postcode" name="postcode"><br><br>
-            <label for="email">Email: </label>
-            <input type="text" id="email" name="email"><br><br>
-            <label for="phone">Phone: </label>
-            <input type="text" id="phone" name="phone"><br><br>
-            <label for="Skills"></label>
-            {check boxes for skills}
-            <label for="otherskills">Other skills: </label>
-            <input type="textarea" id="otherskills" name="otherskills"><br><br>
+        <h1 id="appplyPageHeading" class="theme-light heading">Apply Here</h1>
+        <form id="applyForm" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+            <label class="theme-light label" for="reference">Job reference number: </label>
+            <input class="theme-light inputnumber" type="number" id="reference" name="reference" pattern="[0-9a-zA-Z]{5}" required="required"><br>
+            <label class="theme-light label" for="firstname">First name: </label>
+            <input class="theme-light inputtext" type="text" id="firstname" name="firstname" pattern="[a-zA-Z]{20}"  required="required"><br>
+            <label class="theme-light label" for="surname">Surname: </label>
+            <input class="theme-light inputtext"  type="text" id="surname" name="surname" pattern="[a-zA-Z]{20}"  required="required"><br>
+            <label class="theme-light label" for="dob">Date of birth: </label>
+            <input class="theme-light inputdate" type="date" id="dob" name="dob"><br>
+            <fieldset id="applyGenderOptions" class="theme-light">
+                <legend class="theme-light label">Gender</legend>
+                <span>
+                    <input class="theme-light inputradio" type="radio" name="gender" id="gender-female" value="female"  required="required">
+                    <label class="theme-light label" for="gender-female">Female</label>
+                </span>
+                <span>
+                    <input class="theme-light inputradio" type="radio" name="gender" id="gender-male" value="male">
+                    <label class="theme-light label" for="gender-male">Male</label>
+                </span>
+                <span>
+                    <input class="theme-light inputradio" type="radio" name="gender" id="gender-nonbinary" value="nonbinary">
+                    <label class="theme-light label" for="gender-nonbinary">Non-Binary/Gender Non-Conforming</label>
+                </span>
+                <span>
+                    <input class="theme-light inputradio" type="radio" name="gender" id="gender-exclude" value="exclude">
+                    <label class="theme-light label" for="gender-exclude">Prefer not to say</label>
+                </span>
+                <span>
+                    <input class="theme-light inputradio" type="radio" name="gender" id="gender-other" value="other">
+                    <label class="theme-light label" for="gender-other">Other</label>
+                </span>
+            </fieldset><br>
+            <label class="theme-light label" for="address">Address: </label>
+            <input class="theme-light inputtext" type="text" id="address" name="address" pattern="[0-9a-zA-Z]{40} required="required"><br>
+            <label class="theme-light label" for="suburb">Suburb/Town: </label>
+            <input class="theme-light inputtext" type="text" id="suburb" name="suburb" pattern="[0-9a-zA-Z]{40} required="required"><br>
+            <label class="theme-light label" for="state">State</label>
+            <select class="theme-light select" id="state" name="state"  required="required">
+                <option class="theme-light option" value="">Please Select</option>
+                <option class="theme-light option" value="VIC">VIC</option>
+                <option class="theme-light option" value="NSW">NSW</option>
+                <option class="theme-light option" value="QLD">QLD</option>
+                <option class="theme-light option" value="NT">NT</option>
+                <option class="theme-light option" value="WA">WA</option>
+                <option class="theme-light option" value="SA">SA</option>
+                <option class="theme-light option" value="TAS">TAS</option>
+                <option class="theme-light option" value="ACT">ACT</option>
+            </select>
+            <br>
+            <label class="theme-light label" for="postcode">Postcode: </label>
+            <input class="theme-light inputnumber" type="number" id="postcode" name="postcode" pattern="[0-9]{4}" required="required"><br>
+            <label class="theme-light label" for="email">Email: </label>
+            <input class="theme-light inputtext" type="text" id="email" name="email"  required="required"><br>
+            <label class="theme-light label" for="phone">Phone: </label>
+            <input class="theme-light inputtext" type="text" id="phone" name="phone" pattern="[0-9\s]{8,12}" required="required"><br>
+            <fieldset id="applySkillsOptions" class="theme-light">
+                <legend class="theme-light label">Skills</legend>
+                <span>
+                    <input class="theme-light inputcheckbox" type="checkbox" name="skills" id="skill-1" value="skill1"  required="required">
+                    <label class="theme-light label" for="skill-1">Skill 1</label>
+                </span>
+                <span>
+                    <input class="theme-light inputcheckbox" type="checkbox" name="skills" id="skill-2" value="skill1">
+                    <label class="theme-light label" for="skill-2">Skill 2</label>
+                </span>
+                <span>
+                    <input class="theme-light inputcheckbox" type="checkbox" name="skills" id="skill-3" value="skill1">
+                    <label class="theme-light label" for="skill-3">Skill 3</label>
+                </span>
+                <span>
+                    <input class="theme-light inputcheckbox" type="checkbox" name="skills" id="skill-4" value="skill1">
+                    <label class="theme-light label" for="skill-4">Skill 4</label>
+                </span>
+            </fieldset><br>
+            <label class="theme-light label" for="otherskills">Other skills: </label>
+            <input class="theme-light inputtextarea" type="textarea" id="otherskills" name="otherskills"><br><br>
+            <input class="theme-light submit" type="submit" value="Apply">&nbsp;<input class="theme-light submit" type="reset" value="Reset Form">
         </form>
     </body>
 </html>
