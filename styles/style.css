@@ -7,6 +7,8 @@
             - Selectables (checkbox, radio, drop downs, ect)
         - Buttons
         - Text Displays
+        - Tables
+        - Glass Pane
     - Page Layouts
         - index
         - jobs
@@ -32,18 +34,23 @@
 /* Set styling for the main element */
 main {
     width: 100%;
-    /*background-color: var(--theme-dark);*/
+    background-color: var(--theme-dark);
     color: var(--theme-text);
     padding-top: 50px;
     padding-bottom: 20px;
 }
 
 /* disable side scrollbar */ 
+html {
+    overflow: hidden;
+}
 html, body {
     max-width: 100%;
     overflow-x: hidden;
         /*background-color: var(--theme-dark);*/
     margin: 0%;
+    height: 100%;
+
 }
 /*#endregion*/
 
@@ -204,6 +211,17 @@ html, body {
                     color: var(--theme-text);
                 }
     /*#endregion*/
+    /* Glass Panes */
+    /*#region*/
+        .glasspane {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    /*#endregion*/
+
 /*#endregion*/
 
 /*Styling for pages*/
@@ -240,11 +258,6 @@ html, body {
 
                     #applyForm {
                         padding: 10px 10px 10px 50px;
-                        background: rgba(255, 255, 255, 0.03);
-                        border-radius: 16px;
-                        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-                        backdrop-filter: blur(5px);
-                        border: 1px solid rgba(255, 255, 255, 0.3);
                         width: 30%;
                         min-width: 600px;
                     }
@@ -434,7 +447,7 @@ html, body {
 
 /*Styling for footer*/
 /*#region*/
-    footer {
+    footer {        
         width: 100%;
         height: 50px;
     }
