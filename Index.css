@@ -11,6 +11,10 @@
     border-color: black;
 }
 
+/*common styling for list elements*/
+.theme-light.list {
+    display: list-item; 
+}
 /*Common styling for submit buttons elements*/
 .submit {
     border-radius: 0px;
