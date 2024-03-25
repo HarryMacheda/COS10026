@@ -2,14 +2,28 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="./styles/style.css">
+        <script src="https://kit.fontawesome.com/3832455239.js" crossorigin="anonymous"></script> <!-- Link to the font awesome icons -->
+        <meta name="theme-color" content="#F3F1DC"/> <!-- set the theme colour so mobile browsers set the background colour -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- set the viewport so we know the browsers width for mobile layouts -->
     </head>
     <body>
         <nav>
-
+            <!-- Nav bar
+                Each page has its own span
+                Inside the span is another span with a font awesome icon
+                This span is set to aria-hidden so it is ignored by screen readers
+                We want to hide this as otherwise it will read both icon and link which is redundent
+                Then we have a href with a link to the relevant page
+            -->
+            <span><span class="fa-solid fa-house" aria-hidden="true"></span><a href="index.html">Home</a></span>
+            <span><span class="fa-solid fa-user-tie" aria-hidden="true"></span><a href="jobs.html">Jobs</a></span>
+            <span><span class="fa-solid fa-file-contract" aria-hidden="true"></span><a href="apply.html">Application</a></span>
+            <span><span class="fa-solid fa-people-group" aria-hidden="true"></span><a href="about.html">About Us</a></span>
+            <span><span class="fa-solid fa-star" aria-hidden="true"></span><a href="enhancements.html">Enhancements</a></span>
         </nav>
         <main>
             <h1 class="theme-dark heading">Careers</h1>
-            <div>
+            <div class="glasspane">
                 <h2 class="theme-dark heading">Lead Developer</h2>
                 <p class="theme-dark paragraph">Position reference: LEDEV</p>
                 <h3 class="theme-dark heading">Position Description</h3>
