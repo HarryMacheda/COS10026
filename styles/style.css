@@ -228,8 +228,110 @@ html, body {
 /*#region*/
     /*index.html*/
         /*#region*/
+            
             /*Desktop*/
                 /*#region*/
+                @media screen and (min-width: 600px)
+                {
+
+                    
+                    body {
+                        background-color: var(--theme-dark);
+                        color: var(--theme-dark);
+                    }
+                    
+                    
+                    
+                    .wrappper {
+                        width: 1170px;
+                        margin: auto;
+                    }
+                    
+                    .field-search {
+                        display: flex;
+                        float:right;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 0 0.3em;
+                    }
+                    
+                    .field-search input {
+                        border-radius: 1em;
+                        padding: 0.3em 1em;
+                        border: 0,2em solid #fff;
+                    }
+                    
+                    .menu{
+                        float: right;
+                        list-style: none;
+                        margin-top: 40px;
+                    }
+                    
+                    .menu li{
+                        display: inline-block;
+                    }
+                    
+                    .menu li a{
+                        color: #fff;
+                        text-decoration: none;
+                        padding: 5px 20px;
+                        font-family: poppins;
+                        font-size: 16px;
+                    }
+                    
+                    .menu li a :hover{
+                        background: #fff;
+                        color: #333;
+                    
+                    }
+                    
+                    .LOGO-removebg img{
+                        width: 115px;
+                        float: left;
+                        height: auto;
+                    }
+                    
+
+                    .logo img{
+                        position: absolute;
+                        float: right;
+                        width: 39%;
+                        margin-top: 10%;
+                        
+                    }
+
+                    .welcome-text{
+                        position:absolute;
+                        width: 600px;
+                        height: 300px;
+                        margin: 15% 45%;
+                        text-align: center;
+                    }
+                    
+                    .welcome-text h1{
+                        text-align: center;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 60px;
+                    }
+                    
+                    .welcome-text a{
+                        border: 1px solid #fff;
+                        padding: 10px 25px;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: 14px;
+                        margin-top: 20px;
+                        display: inline-block;
+                        color: #fff;
+                    }
+                    
+                    .welcome-text a :hover{
+                        background: #fff;
+                        color: #333;
+                    }
+                }    
+                
                 /*#endregion*/
             /*Mobile*/
                 /*#region*/

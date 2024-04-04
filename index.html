@@ -2,25 +2,46 @@
 <html lang="en">
   <head>
     <title>NEBULA</title>
-    <link rel="stylesheet" href="Index.css" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
 
   <body>
     <nav>
+      <!-- Nav bar
+          Each page has its own span
+          Inside the span is another span with a font awesome icon
+          This span is set to aria-hidden so it is ignored by screen readers
+          We want to hide this as otherwise it will read both icon and link which is redundent
+          Then we have a href with a link to the relevant page
+      -->
 
+      <span
+        ><span class="fa-solid fa-house" aria-hidden="true"></span
+        ><a href="index.html">Home</a></span
+      >
+      <span
+        ><span class="fa-solid fa-user-tie" aria-hidden="true"></span
+        ><a href="jobs.html">Jobs</a></span
+      >
+      <span
+        ><span class="fa-solid fa-file-contract" aria-hidden="true"></span
+        ><a href="apply.html">Application</a></span
+      >
+      <span
+        ><span class="fa-solid fa-people-group" aria-hidden="true"></span
+        ><a href="about.html">About Us</a></span
+      >
+      <span
+        ><span class="fa-solid fa-star" aria-hidden="true"></span
+        ><a href="enhancements.html">Enhancements</a></span
+      >
     </nav>
+
     <main>
       <div class="warpper">
-        <div class="logo">
-          <img src="LOGO.png" alt="" />
+        <div class="LOGO-removebg">
+          <img src="LOGO-removebg.png" alt="" />
         </div>
-        <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Join us</a></li>
-        </ul>
       </div>
 
       <div class="field-search">
@@ -32,9 +53,11 @@
         <h1>REINVENT WHAT YOUR NETWORK COULD BE</h1>
         <a href="#">Contact us</a>
       </div>
-    </main>
-    <footer>
 
-    </footer>
+      <div class="logo">
+        <img src="LOGO.png" alt="" />
+      </div>
+    </main>
+    <footer></footer>
   </body>
 </html>
