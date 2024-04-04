@@ -34,6 +34,7 @@
 /* Set styling for the main element */
 main {
     width: 100%;
+    min-height: 100%;
     position: relative;
     color: var(--theme-text);
     padding-top: 50px;
@@ -237,7 +238,7 @@ html, body {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 16px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
             z-index: 3
         }
@@ -589,7 +590,7 @@ html, body {
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 100;
+        z-index: 101;
     }
     nav img {
         margin-left: 1%;
@@ -660,6 +661,10 @@ html, body {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
+}
+
+.circle:hover {
+    transform: scale(1.5)
 }
 
 @keyframes starAnimation {
