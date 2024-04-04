@@ -594,7 +594,7 @@ html, body {
     }
     nav img {
         margin-left: 1%;
-        width: 4%;
+        width: 57px;
     }
 
     nav section {
@@ -616,14 +616,40 @@ html, body {
         display: inline-block;
         color: var(--theme-highlight);
     }
+    nav a {
+        display: inline-block;
+        color: var(--theme-highlight);
+    }
+
+    #navMobile div {
+        display: none;
+    }
+    #navMobile:hover div,  #navMobile:active div {
+        display: block;
+        position: absolute;
+        left: calc(100% - 150px);
+        padding-bottom: 5px;
+    }
     /*Desktop layout*/
     @media screen and (min-width: 600px) {
+        #navMobile {
+            display: none;
+        }
         nav span {
             margin: 5px;
         }
     }
     /*Mobile layout*/
     @media screen and (max-width: 600px) {
+        #navDesktop {
+            display: none;
+        }
+        #navMobile div > a{
+            width: 150px;
+            height: 30px;
+            margin: 0px;
+            background-color: var(--theme-white);
+        }
         nav span {
             margin: 8px;
         }
