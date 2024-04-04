@@ -305,14 +305,14 @@ html, body {
                     
                     }
                     
-                    .LOGO-removebg img{
+                    .tiny_logo img{
                         width: 115px;
                         float: left;
                         height: auto;
                     }
                     
 
-                    .logo img{
+                    .main_logo img{
                         position: absolute;
                         float: right;
                         width: 39%;
