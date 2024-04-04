@@ -34,7 +34,6 @@
 /* Set styling for the main element */
 main {
     width: 100%;
-    background-color: var(--theme-dark);
     color: var(--theme-text);
     padding-top: 50px;
     padding-bottom: 20px;
@@ -47,9 +46,10 @@ html {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
-        /*background-color: var(--theme-dark);*/
+    background-color: var(--theme-dark);
     margin: 0%;
     height: 100%;
+    z-index: -100;
 
 }
 /*#endregion*/
@@ -219,6 +219,7 @@ html, body {
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(5px);
             border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 3
         }
     /*#endregion*/
 
@@ -339,11 +340,98 @@ html, body {
         /*#endregion*/
     /*jobs.html*/
         /*#region*/
+        #jobscontainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+
+        .pencilcontainer {
+            display: flex;
+            padding: 2%;
+            position: absolute;
+            right: 10%;
+            bottom: 10%;
+            transition: all .4s ease-in-out;
+            -moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -ms-transition: all .4s ease-in-out;
+        }
+
+        .pencilcontainer:hover { 
+            padding-right: 40%;
+            margin-left: 10%;
+        }
+
+        .pencilicon {
+            padding: 2%;
+            font-size: 3em;
+            
+        }
+
+        .pencilicon:hover {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2,1.2);
+            -ms-transform: scale(1.2,1.2); /* IE 9 */
+            -webkit-transform: scale(1.2,1.2); /* Safari and Chrome */
+
+            /*used from: https://codepen.io/Cheesetoast/pen/nmWmBM*/
+        }
+
+        .joinUs{
+            visibility: collapse;
+            display: none;
+            margin-left: 10px;
+            transition: all .4s ease-in-out;
+            -moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -ms-transition: all .4s ease-in-out;
+            }
+            
+            .pencilcontainer:hover .joinUs{
+            visibility: visible;
+            display: inline-block;
+            }
+        
+
             /*Desktop*/
                 /*#region*/
+                @media screen and (min-width: 600px) 
+                {
+                    #jobsbox {
+                        padding: 10px 10% 50px 50px;
+                        width: 25%;
+                        min-width: 600px;
+                        position: relative;
+                        margin-bottom: 50px;
+                    }
+
+                    #jobsPageHeading {
+                        text-align: center;
+                        margin-top: 0px;
+                        width: 100%;
+                    }
+                }
                 /*#endregion*/
             /*Mobile*/
                 /*#region*/
+                @media screen and (max-width: 600px) {
+                    #jobsbox {
+                        padding: 10px 10px 10px 50px;
+                        background: rgba(255, 255, 255, 0.03);
+                        border-radius: 16px;
+                        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(5px);
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+                    }
+
+                    #jobsPageHeading {
+                        text-align: center;
+                        margin-top: 0px;
+                    }
+                }
                 /*#endregion*/
         /*#endregion*/
     /*apply.html*/
@@ -352,6 +440,7 @@ html, body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                z-index: 3;
             }
             /*Desktop*/
                 /*#region*/
@@ -567,17 +656,28 @@ html, body {
     position: absolute;
     background-color: var(--theme-dark);
     top: 0px;
-    z-index: -1;
+    z-index: 2;
 }
 
 .circle {
     position: absolute;
     color: var(--theme-white);
-    animation-duration: 5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
+    animation-direction: alternate;
     animation-timing-function: linear;
 }
-#circle_0{animation-name: circle_0;animation-delay:3740ms; font-size: 8px;}#circle_1{animation-name: circle_1;animation-delay:2793ms; font-size: 16px;}#circle_2{animation-name: circle_2;animation-delay:1017ms; font-size: 8px;}#circle_3{animation-name: circle_3;animation-delay:1412ms; font-size: 15px;}#circle_4{animation-name: circle_4;animation-delay:1087ms; font-size: 14px;}#circle_5{animation-name: circle_5;animation-delay:2411ms; font-size: 18px;}#circle_6{animation-name: circle_6;animation-delay:3351ms; font-size: 19px;}#circle_7{animation-name: circle_7;animation-delay:950ms; font-size: 17px;}#circle_8{animation-name: circle_8;animation-delay:951ms; font-size: 9px;}#circle_9{animation-name: circle_9;animation-delay:1056ms; font-size: 13px;}#circle_10{animation-name: circle_10;animation-delay:4687ms; font-size: 19px;}#circle_11{animation-name: circle_11;animation-delay:1284ms; font-size: 19px;}#circle_12{animation-name: circle_12;animation-delay:2687ms; font-size: 15px;}#circle_13{animation-name: circle_13;animation-delay:1276ms; font-size: 20px;}#circle_14{animation-name: circle_14;animation-delay:1124ms; font-size: 11px;}#circle_15{animation-name: circle_15;animation-delay:4635ms; font-size: 15px;}#circle_16{animation-name: circle_16;animation-delay:502ms; font-size: 17px;}#circle_17{animation-name: circle_17;animation-delay:4508ms; font-size: 8px;}#circle_18{animation-name: circle_18;animation-delay:1457ms; font-size: 10px;}#circle_19{animation-name: circle_19;animation-delay:1059ms; font-size: 15px;}#circle_20{animation-name: circle_20;animation-delay:2384ms; font-size: 13px;}#circle_21{animation-name: circle_21;animation-delay:2049ms; font-size: 17px;}#circle_22{animation-name: circle_22;animation-delay:4728ms; font-size: 15px;}#circle_23{animation-name: circle_23;animation-delay:2642ms; font-size: 14px;}#circle_24{animation-name: circle_24;animation-delay:2630ms; font-size: 18px;}#circle_25{animation-name: circle_25;animation-delay:2387ms; font-size: 16px;}#circle_26{animation-name: circle_26;animation-delay:4069ms; font-size: 9px;}#circle_27{animation-name: circle_27;animation-delay:4818ms; font-size: 16px;}#circle_28{animation-name: circle_28;animation-delay:223ms; font-size: 13px;}#circle_29{animation-name: circle_29;animation-delay:4693ms; font-size: 15px;}#circle_30{animation-name: circle_30;animation-delay:4793ms; font-size: 15px;}#circle_31{animation-name: circle_31;animation-delay:221ms; font-size: 14px;}#circle_32{animation-name: circle_32;animation-delay:2410ms; font-size: 17px;}#circle_33{animation-name: circle_33;animation-delay:1528ms; font-size: 10px;}#circle_34{animation-name: circle_34;animation-delay:3542ms; font-size: 15px;}#circle_35{animation-name: circle_35;animation-delay:1054ms; font-size: 15px;}#circle_36{animation-name: circle_36;animation-delay:4408ms; font-size: 8px;}#circle_37{animation-name: circle_37;animation-delay:3128ms; font-size: 20px;}#circle_38{animation-name: circle_38;animation-delay:1769ms; font-size: 9px;}#circle_39{animation-name: circle_39;animation-delay:473ms; font-size: 19px;}#circle_40{animation-name: circle_40;animation-delay:2819ms; font-size: 20px;}#circle_41{animation-name: circle_41;animation-delay:781ms; font-size: 10px;}#circle_42{animation-name: circle_42;animation-delay:2535ms; font-size: 9px;}#circle_43{animation-name: circle_43;animation-delay:3656ms; font-size: 17px;}#circle_44{animation-name: circle_44;animation-delay:4202ms; font-size: 19px;}#circle_45{animation-name: circle_45;animation-delay:3946ms; font-size: 8px;}#circle_46{animation-name: circle_46;animation-delay:401ms; font-size: 10px;}#circle_47{animation-name: circle_47;animation-delay:3436ms; font-size: 15px;}#circle_48{animation-name: circle_48;animation-delay:133ms; font-size: 19px;}#circle_49{animation-name: circle_49;animation-delay:900ms; font-size: 11px;}#circle_50{animation-name: circle_50;animation-delay:164ms; font-size: 11px;}#circle_51{animation-name: circle_51;animation-delay:3300ms; font-size: 11px;}#circle_52{animation-name: circle_52;animation-delay:455ms; font-size: 11px;}#circle_53{animation-name: circle_53;animation-delay:1876ms; font-size: 13px;}#circle_54{animation-name: circle_54;animation-delay:3399ms; font-size: 19px;}#circle_55{animation-name: circle_55;animation-delay:2048ms; font-size: 15px;}#circle_56{animation-name: circle_56;animation-delay:4189ms; font-size: 9px;}#circle_57{animation-name: circle_57;animation-delay:2727ms; font-size: 17px;}#circle_58{animation-name: circle_58;animation-delay:2214ms; font-size: 14px;}#circle_59{animation-name: circle_59;animation-delay:4086ms; font-size: 16px;}#circle_60{animation-name: circle_60;animation-delay:1818ms; font-size: 12px;}#circle_61{animation-name: circle_61;animation-delay:4421ms; font-size: 14px;}#circle_62{animation-name: circle_62;animation-delay:359ms; font-size: 9px;}#circle_63{animation-name: circle_63;animation-delay:1515ms; font-size: 15px;}#circle_64{animation-name: circle_64;animation-delay:867ms; font-size: 18px;}#circle_65{animation-name: circle_65;animation-delay:1893ms; font-size: 16px;}#circle_66{animation-name: circle_66;animation-delay:1073ms; font-size: 19px;}#circle_67{animation-name: circle_67;animation-delay:4791ms; font-size: 19px;}#circle_68{animation-name: circle_68;animation-delay:2941ms; font-size: 9px;}#circle_69{animation-name: circle_69;animation-delay:2230ms; font-size: 10px;}#circle_70{animation-name: circle_70;animation-delay:4022ms; font-size: 14px;}#circle_71{animation-name: circle_71;animation-delay:3812ms; font-size: 17px;}#circle_72{animation-name: circle_72;animation-delay:3589ms; font-size: 13px;}#circle_73{animation-name: circle_73;animation-delay:3753ms; font-size: 14px;}#circle_74{animation-name: circle_74;animation-delay:2761ms; font-size: 18px;}#circle_75{animation-name: circle_75;animation-delay:940ms; font-size: 19px;}#circle_76{animation-name: circle_76;animation-delay:596ms; font-size: 10px;}#circle_77{animation-name: circle_77;animation-delay:1919ms; font-size: 17px;}#circle_78{animation-name: circle_78;animation-delay:4771ms; font-size: 16px;}#circle_79{animation-name: circle_79;animation-delay:415ms; font-size: 15px;}#circle_80{animation-name: circle_80;animation-delay:4046ms; font-size: 19px;}#circle_81{animation-name: circle_81;animation-delay:4720ms; font-size: 19px;}#circle_82{animation-name: circle_82;animation-delay:528ms; font-size: 18px;}#circle_83{animation-name: circle_83;animation-delay:4952ms; font-size: 9px;}#circle_84{animation-name: circle_84;animation-delay:3006ms; font-size: 10px;}#circle_85{animation-name: circle_85;animation-delay:745ms; font-size: 20px;}#circle_86{animation-name: circle_86;animation-delay:2082ms; font-size: 8px;}#circle_87{animation-name: circle_87;animation-delay:3902ms; font-size: 8px;}#circle_88{animation-name: circle_88;animation-delay:2404ms; font-size: 13px;}#circle_89{animation-name: circle_89;animation-delay:1005ms; font-size: 12px;}#circle_90{animation-name: circle_90;animation-delay:1614ms; font-size: 17px;}#circle_91{animation-name: circle_91;animation-delay:4483ms; font-size: 13px;}#circle_92{animation-name: circle_92;animation-delay:833ms; font-size: 17px;}#circle_93{animation-name: circle_93;animation-delay:1179ms; font-size: 17px;}#circle_94{animation-name: circle_94;animation-delay:3556ms; font-size: 14px;}#circle_95{animation-name: circle_95;animation-delay:4030ms; font-size: 8px;}#circle_96{animation-name: circle_96;animation-delay:3850ms; font-size: 12px;}#circle_97{animation-name: circle_97;animation-delay:1833ms; font-size: 18px;}#circle_98{animation-name: circle_98;animation-delay:983ms; font-size: 20px;}#circle_99{animation-name: circle_99;animation-delay:3763ms; font-size: 10px;}
-@keyframes circle_0{0% {top: -79%; left: -23%;} 100% {top: calc(200% - 79%); left: calc(200% - 23%);}}@keyframes circle_1{0% {top: -65%; left: -82%;} 100% {top: calc(200% - 65%); left: calc(200% - 82%);}}@keyframes circle_2{0% {top: -25%; left: -80%;} 100% {top: calc(200% - 25%); left: calc(200% - 80%);}}@keyframes circle_3{0% {top: -20%; left: -55%;} 100% {top: calc(200% - 20%); left: calc(200% - 55%);}}@keyframes circle_4{0% {top: -48%; left: -57%;} 100% {top: calc(200% - 48%); left: calc(200% - 57%);}}@keyframes circle_5{0% {top: -34%; left: -51%;} 100% {top: calc(200% - 34%); left: calc(200% - 51%);}}@keyframes circle_6{0% {top: -81%; left: -67%;} 100% {top: calc(200% - 81%); left: calc(200% - 67%);}}@keyframes circle_7{0% {top: -24%; left: -89%;} 100% {top: calc(200% - 24%); left: calc(200% - 89%);}}@keyframes circle_8{0% {top: -67%; left: -35%;} 100% {top: calc(200% - 67%); left: calc(200% - 35%);}}@keyframes circle_9{0% {top: -76%; left: -41%;} 100% {top: calc(200% - 76%); left: calc(200% - 41%);}}@keyframes circle_10{0% {top: -14%; left: -13%;} 100% {top: calc(200% - 14%); left: calc(200% - 13%);}}@keyframes circle_11{0% {top: -86%; left: -68%;} 100% {top: calc(200% - 86%); left: calc(200% - 68%);}}@keyframes circle_12{0% {top: -80%; left: -53%;} 100% {top: calc(200% - 80%); left: calc(200% - 53%);}}@keyframes circle_13{0% {top: -18%; left: -17%;} 100% {top: calc(200% - 18%); left: calc(200% - 17%);}}@keyframes circle_14{0% {top: -13%; left: -74%;} 100% {top: calc(200% - 13%); left: calc(200% - 74%);}}@keyframes circle_15{0% {top: -15%; left: -24%;} 100% {top: calc(200% - 15%); left: calc(200% - 24%);}}@keyframes circle_16{0% {top: -74%; left: -72%;} 100% {top: calc(200% - 74%); left: calc(200% - 72%);}}@keyframes circle_17{0% {top: -88%; left: -35%;} 100% {top: calc(200% - 88%); left: calc(200% - 35%);}}@keyframes circle_18{0% {top: -73%; left: -72%;} 100% {top: calc(200% - 73%); left: calc(200% - 72%);}}@keyframes circle_19{0% {top: -40%; left: -45%;} 100% {top: calc(200% - 40%); left: calc(200% - 45%);}}@keyframes circle_20{0% {top: -21%; left: -82%;} 100% {top: calc(200% - 21%); left: calc(200% - 82%);}}@keyframes circle_21{0% {top: -27%; left: -51%;} 100% {top: calc(200% - 27%); left: calc(200% - 51%);}}@keyframes circle_22{0% {top: -48%; left: -56%;} 100% {top: calc(200% - 48%); left: calc(200% - 56%);}}@keyframes circle_23{0% {top: -10%; left: -81%;} 100% {top: calc(200% - 10%); left: calc(200% - 81%);}}@keyframes circle_24{0% {top: -78%; left: -72%;} 100% {top: calc(200% - 78%); left: calc(200% - 72%);}}@keyframes circle_25{0% {top: -26%; left: -24%;} 100% {top: calc(200% - 26%); left: calc(200% - 24%);}}@keyframes circle_26{0% {top: -57%; left: -38%;} 100% {top: calc(200% - 57%); left: calc(200% - 38%);}}@keyframes circle_27{0% {top: -78%; left: -85%;} 100% {top: calc(200% - 78%); left: calc(200% - 85%);}}@keyframes circle_28{0% {top: -16%; left: -57%;} 100% {top: calc(200% - 16%); left: calc(200% - 57%);}}@keyframes circle_29{0% {top: -23%; left: -69%;} 100% {top: calc(200% - 23%); left: calc(200% - 69%);}}@keyframes circle_30{0% {top: -51%; left: -33%;} 100% {top: calc(200% - 51%); left: calc(200% - 33%);}}@keyframes circle_31{0% {top: -56%; left: -66%;} 100% {top: calc(200% - 56%); left: calc(200% - 66%);}}@keyframes circle_32{0% {top: -83%; left: -68%;} 100% {top: calc(200% - 83%); left: calc(200% - 68%);}}@keyframes circle_33{0% {top: -30%; left: -87%;} 100% {top: calc(200% - 30%); left: calc(200% - 87%);}}@keyframes circle_34{0% {top: -41%; left: -64%;} 100% {top: calc(200% - 41%); left: calc(200% - 64%);}}@keyframes circle_35{0% {top: -75%; left: -77%;} 100% {top: calc(200% - 75%); left: calc(200% - 77%);}}@keyframes circle_36{0% {top: -71%; left: -55%;} 100% {top: calc(200% - 71%); left: calc(200% - 55%);}}@keyframes circle_37{0% {top: -73%; left: -77%;} 100% {top: calc(200% - 73%); left: calc(200% - 77%);}}@keyframes circle_38{0% {top: -56%; left: -23%;} 100% {top: calc(200% - 56%); left: calc(200% - 23%);}}@keyframes circle_39{0% {top: -32%; left: -44%;} 100% {top: calc(200% - 32%); left: calc(200% - 44%);}}@keyframes circle_40{0% {top: -54%; left: -59%;} 100% {top: calc(200% - 54%); left: calc(200% - 59%);}}@keyframes circle_41{0% {top: -39%; left: -15%;} 100% {top: calc(200% - 39%); left: calc(200% - 15%);}}@keyframes circle_42{0% {top: -86%; left: -78%;} 100% {top: calc(200% - 86%); left: calc(200% - 78%);}}@keyframes circle_43{0% {top: -28%; left: -63%;} 100% {top: calc(200% - 28%); left: calc(200% - 63%);}}@keyframes circle_44{0% {top: -76%; left: -15%;} 100% {top: calc(200% - 76%); left: calc(200% - 15%);}}@keyframes circle_45{0% {top: -81%; left: -78%;} 100% {top: calc(200% - 81%); left: calc(200% - 78%);}}@keyframes circle_46{0% {top: -33%; left: -44%;} 100% {top: calc(200% - 33%); left: calc(200% - 44%);}}@keyframes circle_47{0% {top: -32%; left: -62%;} 100% {top: calc(200% - 32%); left: calc(200% - 62%);}}@keyframes circle_48{0% {top: -53%; left: -65%;} 100% {top: calc(200% - 53%); left: calc(200% - 65%);}}@keyframes circle_49{0% {top: -88%; left: -52%;} 100% {top: calc(200% - 88%); left: calc(200% - 52%);}}@keyframes circle_50{0% {top: -55%; left: -28%;} 100% {top: calc(200% - 55%); left: calc(200% - 28%);}}@keyframes circle_51{0% {top: -81%; left: -10%;} 100% {top: calc(200% - 81%); left: calc(200% - 10%);}}@keyframes circle_52{0% {top: -65%; left: -62%;} 100% {top: calc(200% - 65%); left: calc(200% - 62%);}}@keyframes circle_53{0% {top: -73%; left: -29%;} 100% {top: calc(200% - 73%); left: calc(200% - 29%);}}@keyframes circle_54{0% {top: -25%; left: -71%;} 100% {top: calc(200% - 25%); left: calc(200% - 71%);}}@keyframes circle_55{0% {top: -86%; left: -12%;} 100% {top: calc(200% - 86%); left: calc(200% - 12%);}}@keyframes circle_56{0% {top: -79%; left: -37%;} 100% {top: calc(200% - 79%); left: calc(200% - 37%);}}@keyframes circle_57{0% {top: -31%; left: -65%;} 100% {top: calc(200% - 31%); left: calc(200% - 65%);}}@keyframes circle_58{0% {top: -66%; left: -71%;} 100% {top: calc(200% - 66%); left: calc(200% - 71%);}}@keyframes circle_59{0% {top: -38%; left: -67%;} 100% {top: calc(200% - 38%); left: calc(200% - 67%);}}@keyframes circle_60{0% {top: -58%; left: -17%;} 100% {top: calc(200% - 58%); left: calc(200% - 17%);}}@keyframes circle_61{0% {top: -28%; left: -37%;} 100% {top: calc(200% - 28%); left: calc(200% - 37%);}}@keyframes circle_62{0% {top: -63%; left: -66%;} 100% {top: calc(200% - 63%); left: calc(200% - 66%);}}@keyframes circle_63{0% {top: -16%; left: -84%;} 100% {top: calc(200% - 16%); left: calc(200% - 84%);}}@keyframes circle_64{0% {top: -74%; left: -83%;} 100% {top: calc(200% - 74%); left: calc(200% - 83%);}}@keyframes circle_65{0% {top: -75%; left: -59%;} 100% {top: calc(200% - 75%); left: calc(200% - 59%);}}@keyframes circle_66{0% {top: -84%; left: -59%;} 100% {top: calc(200% - 84%); left: calc(200% - 59%);}}@keyframes circle_67{0% {top: -83%; left: -78%;} 100% {top: calc(200% - 83%); left: calc(200% - 78%);}}@keyframes circle_68{0% {top: -28%; left: -63%;} 100% {top: calc(200% - 28%); left: calc(200% - 63%);}}@keyframes circle_69{0% {top: -30%; left: -62%;} 100% {top: calc(200% - 30%); left: calc(200% - 62%);}}@keyframes circle_70{0% {top: -15%; left: -69%;} 100% {top: calc(200% - 15%); left: calc(200% - 69%);}}@keyframes circle_71{0% {top: -51%; left: -59%;} 100% {top: calc(200% - 51%); left: calc(200% - 59%);}}@keyframes circle_72{0% {top: -67%; left: -86%;} 100% {top: calc(200% - 67%); left: calc(200% - 86%);}}@keyframes circle_73{0% {top: -20%; left: -56%;} 100% {top: calc(200% - 20%); left: calc(200% - 56%);}}@keyframes circle_74{0% {top: -58%; left: -22%;} 100% {top: calc(200% - 58%); left: calc(200% - 22%);}}@keyframes circle_75{0% {top: -23%; left: -88%;} 100% {top: calc(200% - 23%); left: calc(200% - 88%);}}@keyframes circle_76{0% {top: -70%; left: -58%;} 100% {top: calc(200% - 70%); left: calc(200% - 58%);}}@keyframes circle_77{0% {top: -42%; left: -13%;} 100% {top: calc(200% - 42%); left: calc(200% - 13%);}}@keyframes circle_78{0% {top: -39%; left: -77%;} 100% {top: calc(200% - 39%); left: calc(200% - 77%);}}@keyframes circle_79{0% {top: -61%; left: -14%;} 100% {top: calc(200% - 61%); left: calc(200% - 14%);}}@keyframes circle_80{0% {top: -87%; left: -63%;} 100% {top: calc(200% - 87%); left: calc(200% - 63%);}}@keyframes circle_81{0% {top: -77%; left: -22%;} 100% {top: calc(200% - 77%); left: calc(200% - 22%);}}@keyframes circle_82{0% {top: -21%; left: -11%;} 100% {top: calc(200% - 21%); left: calc(200% - 11%);}}@keyframes circle_83{0% {top: -73%; left: -15%;} 100% {top: calc(200% - 73%); left: calc(200% - 15%);}}@keyframes circle_84{0% {top: -61%; left: -32%;} 100% {top: calc(200% - 61%); left: calc(200% - 32%);}}@keyframes circle_85{0% {top: -62%; left: -28%;} 100% {top: calc(200% - 62%); left: calc(200% - 28%);}}@keyframes circle_86{0% {top: -83%; left: -48%;} 100% {top: calc(200% - 83%); left: calc(200% - 48%);}}@keyframes circle_87{0% {top: -19%; left: -65%;} 100% {top: calc(200% - 19%); left: calc(200% - 65%);}}@keyframes circle_88{0% {top: -86%; left: -54%;} 100% {top: calc(200% - 86%); left: calc(200% - 54%);}}@keyframes circle_89{0% {top: -18%; left: -43%;} 100% {top: calc(200% - 18%); left: calc(200% - 43%);}}@keyframes circle_90{0% {top: -23%; left: -31%;} 100% {top: calc(200% - 23%); left: calc(200% - 31%);}}@keyframes circle_91{0% {top: -47%; left: -20%;} 100% {top: calc(200% - 47%); left: calc(200% - 20%);}}@keyframes circle_92{0% {top: -68%; left: -89%;} 100% {top: calc(200% - 68%); left: calc(200% - 89%);}}@keyframes circle_93{0% {top: -48%; left: -10%;} 100% {top: calc(200% - 48%); left: calc(200% - 10%);}}@keyframes circle_94{0% {top: -77%; left: -40%;} 100% {top: calc(200% - 77%); left: calc(200% - 40%);}}@keyframes circle_95{0% {top: -12%; left: -77%;} 100% {top: calc(200% - 12%); left: calc(200% - 77%);}}@keyframes circle_96{0% {top: -62%; left: -56%;} 100% {top: calc(200% - 62%); left: calc(200% - 56%);}}@keyframes circle_97{0% {top: -23%; left: -72%;} 100% {top: calc(200% - 23%); left: calc(200% - 72%);}}@keyframes circle_98{0% {top: -70%; left: -17%;} 100% {top: calc(200% - 70%); left: calc(200% - 17%);}}@keyframes circle_99{0% {top: -73%; left: -74%;} 100% {top: calc(200% - 73%); left: calc(200% - 74%);}}
 
-/*#endregion*/
+@keyframes starAnimation {
+    0% {transform: scale(1);}
+    75% {transform: scale(1);}
+    100% {transform: scale(1.3)}
+}
+
+#circle_0_0{position: absolute;top:38%;left:80%;animation-name: starAnimation;animation-delay:990ms;font-size: 10px}#circle_0_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_0_1{position: absolute;top:31%;left:82%;animation-name: starAnimation;animation-delay:4739ms;font-size: 9px}#circle_0_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_0_2{position: absolute;top:43%;left:79%;animation-name: starAnimation;animation-delay:1299ms;font-size: 15px}#circle_0_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_0_3{position: absolute;top:26%;left:80%;animation-name: starAnimation;animation-delay:969ms;font-size: 13px}#circle_0_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_1_0{position: absolute;top:65%;left:61%;animation-name: starAnimation;animation-delay:3060ms;font-size: 17px}#circle_1_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_1_1{position: absolute;top:55%;left:75%;animation-name: starAnimation;animation-delay:1023ms;font-size: 19px}#circle_1_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_1_2{position: absolute;top:61%;left:69%;animation-name: starAnimation;animation-delay:4507ms;font-size: 16px}#circle_1_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_1_3{position: absolute;top:56%;left:73%;animation-name: starAnimation;animation-delay:1561ms;font-size: 9px}#circle_1_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_1_4{position: absolute;top:66%;left:79%;animation-name: starAnimation;animation-delay:109ms;font-size: 8px}#circle_1_4:hover {transform: scale(1.5);color: white; animation:none;}#circle_2_0{position: absolute;top:63%;left:18%;animation-name: starAnimation;animation-delay:1734ms;font-size: 10px}#circle_2_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_2_1{position: absolute;top:59%;left:9%;animation-name: starAnimation;animation-delay:424ms;font-size: 17px}#circle_2_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_2_2{position: absolute;top:60%;left:19%;animation-name: starAnimation;animation-delay:1204ms;font-size: 20px}#circle_2_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_2_3{position: absolute;top:70%;left:22%;animation-name: starAnimation;animation-delay:1339ms;font-size: 19px}#circle_2_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_3_0{position: absolute;top:16%;left:6%;animation-name: starAnimation;animation-delay:575ms;font-size: 19px}#circle_3_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_3_1{position: absolute;top:6%;left:13%;animation-name: starAnimation;animation-delay:2382ms;font-size: 11px}#circle_3_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_3_2{position: absolute;top:21%;left:11%;animation-name: starAnimation;animation-delay:4263ms;font-size: 16px}#circle_3_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_4_0{position: absolute;top:79%;left:72%;animation-name: starAnimation;animation-delay:4372ms;font-size: 15px}#circle_4_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_4_1{position: absolute;top:79%;left:72%;animation-name: starAnimation;animation-delay:1062ms;font-size: 19px}#circle_4_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_4_2{position: absolute;top:88%;left:65%;animation-name: starAnimation;animation-delay:2675ms;font-size: 9px}#circle_4_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_4_3{position: absolute;top:90%;left:79%;animation-name: starAnimation;animation-delay:2218ms;font-size: 12px}#circle_4_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_5_0{position: absolute;top:74%;left:64%;animation-name: starAnimation;animation-delay:3758ms;font-size: 10px}#circle_5_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_5_1{position: absolute;top:77%;left:64%;animation-name: starAnimation;animation-delay:3921ms;font-size: 19px}#circle_5_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_5_2{position: absolute;top:81%;left:46%;animation-name: starAnimation;animation-delay:4746ms;font-size: 20px}#circle_5_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_5_3{position: absolute;top:75%;left:62%;animation-name: starAnimation;animation-delay:2786ms;font-size: 19px}#circle_5_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_6_0{position: absolute;top:45%;left:9%;animation-name: starAnimation;animation-delay:3265ms;font-size: 8px}#circle_6_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_6_1{position: absolute;top:43%;left:7%;animation-name: starAnimation;animation-delay:1209ms;font-size: 12px}#circle_6_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_6_2{position: absolute;top:55%;left:8%;animation-name: starAnimation;animation-delay:38ms;font-size: 12px}#circle_6_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_7_0{position: absolute;top:22%;left:22%;animation-name: starAnimation;animation-delay:4547ms;font-size: 16px}#circle_7_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_7_1{position: absolute;top:28%;left:24%;animation-name: starAnimation;animation-delay:525ms;font-size: 11px}#circle_7_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_7_2{position: absolute;top:24%;left:12%;animation-name: starAnimation;animation-delay:1772ms;font-size: 8px}#circle_7_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_7_3{position: absolute;top:32%;left:11%;animation-name: starAnimation;animation-delay:3522ms;font-size: 20px}#circle_7_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_8_0{position: absolute;top:14%;left:59%;animation-name: starAnimation;animation-delay:2829ms;font-size: 13px}#circle_8_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_8_1{position: absolute;top:8%;left:72%;animation-name: starAnimation;animation-delay:1346ms;font-size: 9px}#circle_8_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_8_2{position: absolute;top:27%;left:59%;animation-name: starAnimation;animation-delay:430ms;font-size: 14px}#circle_8_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_8_3{position: absolute;top:22%;left:61%;animation-name: starAnimation;animation-delay:3004ms;font-size: 16px}#circle_8_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_8_4{position: absolute;top:25%;left:62%;animation-name: starAnimation;animation-delay:2230ms;font-size: 13px}#circle_8_4:hover {transform: scale(1.5);color: white; animation:none;}#circle_9_0{position: absolute;top:36%;left:83%;animation-name: starAnimation;animation-delay:3939ms;font-size: 17px}#circle_9_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_9_1{position: absolute;top:38%;left:84%;animation-name: starAnimation;animation-delay:1756ms;font-size: 18px}#circle_9_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_9_2{position: absolute;top:35%;left:71%;animation-name: starAnimation;animation-delay:4379ms;font-size: 19px}#circle_9_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_9_3{position: absolute;top:26%;left:83%;animation-name: starAnimation;animation-delay:2341ms;font-size: 9px}#circle_9_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_9_4{position: absolute;top:22%;left:88%;animation-name: starAnimation;animation-delay:2962ms;font-size: 9px}#circle_9_4:hover {transform: scale(1.5);color: white; animation:none;}#circle_10_0{position: absolute;top:77%;left:42%;animation-name: starAnimation;animation-delay:703ms;font-size: 9px}#circle_10_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_10_1{position: absolute;top:84%;left:37%;animation-name: starAnimation;animation-delay:1046ms;font-size: 10px}#circle_10_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_10_2{position: absolute;top:86%;left:33%;animation-name: starAnimation;animation-delay:559ms;font-size: 14px}#circle_10_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_11_0{position: absolute;top:48%;left:26%;animation-name: starAnimation;animation-delay:2058ms;font-size: 19px}#circle_11_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_11_1{position: absolute;top:35%;left:30%;animation-name: starAnimation;animation-delay:3730ms;font-size: 17px}#circle_11_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_11_2{position: absolute;top:51%;left:30%;animation-name: starAnimation;animation-delay:771ms;font-size: 16px}#circle_11_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_12_0{position: absolute;top:44%;left:41%;animation-name: starAnimation;animation-delay:4488ms;font-size: 12px}#circle_12_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_12_1{position: absolute;top:33%;left:30%;animation-name: starAnimation;animation-delay:4703ms;font-size: 11px}#circle_12_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_12_2{position: absolute;top:32%;left:33%;animation-name: starAnimation;animation-delay:15ms;font-size: 11px}#circle_12_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_13_0{position: absolute;top:11%;left:45%;animation-name: starAnimation;animation-delay:371ms;font-size: 9px}#circle_13_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_13_1{position: absolute;top:7%;left:42%;animation-name: starAnimation;animation-delay:2529ms;font-size: 10px}#circle_13_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_13_2{position: absolute;top:6%;left:31%;animation-name: starAnimation;animation-delay:3283ms;font-size: 19px}#circle_13_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_13_3{position: absolute;top:18%;left:32%;animation-name: starAnimation;animation-delay:764ms;font-size: 8px}#circle_13_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_14_0{position: absolute;top:65%;left:27%;animation-name: starAnimation;animation-delay:4566ms;font-size: 8px}#circle_14_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_14_1{position: absolute;top:72%;left:24%;animation-name: starAnimation;animation-delay:2040ms;font-size: 20px}#circle_14_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_14_2{position: absolute;top:57%;left:33%;animation-name: starAnimation;animation-delay:199ms;font-size: 10px}#circle_14_2:hover {transform: scale(1.5);color: white; animation:none;}
+
+
+
+
+
+
