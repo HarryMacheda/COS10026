@@ -34,10 +34,12 @@
 /* Set styling for the main element */
 main {
     width: 100%;
+    min-height: 100%;
     position: relative;
     color: var(--theme-text);
     padding-top: 50px;
     padding-bottom: 20px;
+    margin-top: 50px;
     z-index: 100;
 }
 
@@ -236,7 +238,7 @@ html, body {
             background: rgba(255, 255, 255, 0.03);
             border-radius: 16px;
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.3);
             z-index: 3
         }
@@ -252,79 +254,11 @@ html, body {
             /*Desktop*/
                 /*#region*/
                 @media screen and (min-width: 600px)
-                {
-
-                    
-                    body {
-                        background-color: var(--theme-dark);
-                        color: var(--theme-dark);
-                    }
-                    
-                    
-                    
-                    .wrappper {
-                        width: 1170px;
-                        margin: auto;
-                    }
-                    
-                    .field-search {
-                        display: flex;
-                        float:right;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 0 0.3em;
-                    }
-                    
-                    .field-search input {
-                        border-radius: 1em;
-                        padding: 0.3em 1em;
-                        border: 0,2em solid #fff;
-                    }
-                    
-                    .menu{
-                        float: right;
-                        list-style: none;
-                        margin-top: 40px;
-                    }
-                    
-                    .menu li{
-                        display: inline-block;
-                    }
-                    
-                    .menu li a{
-                        color: #fff;
-                        text-decoration: none;
-                        padding: 5px 20px;
-                        font-family: poppins;
-                        font-size: 16px;
-                    }
-                    
-                    .menu li a :hover{
-                        background: #fff;
-                        color: #333;
-                    
-                    }
-                    
-                    .tiny_logo img{
-                        width: 115px;
-                        float: left;
-                        height: auto;
-                    }
-                    
-
-                    .main_logo img{
-                        position: absolute;
-                        float: right;
-                        width: 39%;
-                        margin-top: 10%;
-                        
-                    }
-
+                {                             
                     .welcome-text{
-                        position:absolute;
-                        width: 600px;
+                        float: right;
+                        width: 50%;
                         height: 300px;
-                        margin: 15% 45%;
                         text-align: center;
                     }
                     
@@ -350,8 +284,12 @@ html, body {
                         background: #fff;
                         color: #333;
                     }
-                }    
-                
+
+                    .logo {
+                        float: left;
+                        width: 50%;
+                    }
+                }        
                 /*#endregion*/
             /*Mobile*/
                 /*#region*/
@@ -652,7 +590,18 @@ html, body {
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 100;
+        z-index: 101;
+    }
+    nav img {
+        margin-left: 1%;
+        width: 4%;
+    }
+
+    nav section {
+        margin: 10px;
+        float: right;
+        font-size: larger;
+        vertical-align: middle
     }
     /*styling*/
     nav {
@@ -664,6 +613,7 @@ html, body {
         color: var(--theme-highlight);
     }
     nav span {
+        display: inline-block;
         color: var(--theme-highlight);
     }
     /*Desktop layout*/
@@ -711,6 +661,10 @@ html, body {
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
+}
+
+.circle:hover {
+    transform: scale(1.5)
 }
 
 @keyframes starAnimation {

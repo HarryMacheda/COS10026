@@ -6,7 +6,21 @@
     </head>
     <body>
         <nav>
-
+            <!-- Nav bar
+            Each page has its own span
+            Inside the span is another span with a font awesome icon
+            This span is set to aria-hidden so it is ignored by screen readers
+            We want to hide this as otherwise it will read both icon and link which is redundent
+            Then we have a href with a link to the relevant page
+             -->
+            <img src="./tiny_logo.png" alt="" />
+            <section>
+                <span><span class="fa-solid fa-house" aria-hidden="true"></span><a href="./index.html">Home</a></span>
+                <span><span class="fa-solid fa-user-tie" aria-hidden="true"></span><a href="./jobs.html">Jobs</a></span>
+                <span><span class="fa-solid fa-file-contract" aria-hidden="true"></span><a href="./apply.html">Application</a></span>
+                <span><span class="fa-solid fa-people-group" aria-hidden="true"></span><a href="./about.html">About Us</a></span>
+                <span><span class="fa-solid fa-star" aria-hidden="true"></span><a href="./enhancements.html">Enhancements</a></span>
+            </section>
         </nav>
         <main>
         <div>
