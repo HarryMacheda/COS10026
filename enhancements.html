@@ -98,6 +98,26 @@
                     <p class="theme-dark code" >
                         &lt;span class=&quot;circle fa-solid fa-star&quot; id=&quot;circle_0_0&quot;&gt;&lt;/span&gt;
                     </p>
+                    Then we create a random class matching the id to have a random position,
+                    animation offset, and base size.
+                    <p class="theme-dark code" >
+                        #circle_0_0 { <br>
+                            &emsp;position: absolute;<br> 
+                            &emsp;top:38%; left:80%;<br>
+                            &emsp;animation-name: starAnimation;<br> 
+                            &emsp;animation-delay:990ms;<br> 
+                            &emsp;font-size: 10px<br> 
+                        }
+                    </p>
+                    All the stars share a base animation which scales up the star over a time of 
+                    2 seconds
+                    <p class="theme-dark code" >
+                        @keyframes starAnimation {<br> 
+                           &emsp;0% {transform: scale(1);}<br> 
+                           &emsp;75% {transform: scale(1);}<br> 
+                           &emsp;100% {transform: scale(1.3)}<br> 
+                        }
+                    </p>
                 </p>
             </div>
         </main>
