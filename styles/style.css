@@ -238,11 +238,98 @@ html, body {
         /*#endregion*/
     /*jobs.html*/
         /*#region*/
+        #jobscontainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
+        }
+
+        .pencilcontainer {
+            display: flex;
+            padding: 2%;
+            position: absolute;
+            right: 10%;
+            bottom: 10%;
+            transition: all .4s ease-in-out;
+            -moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -ms-transition: all .4s ease-in-out;
+        }
+
+        .pencilcontainer:hover { 
+            padding-right: 40%;
+            margin-left: 10%;
+        }
+
+        .pencilicon {
+            padding: 2%;
+            font-size: 3em;
+            
+        }
+
+        .pencilicon:hover {
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2,1.2);
+            -ms-transform: scale(1.2,1.2); /* IE 9 */
+            -webkit-transform: scale(1.2,1.2); /* Safari and Chrome */
+
+            /*used from: https://codepen.io/Cheesetoast/pen/nmWmBM*/
+        }
+
+        .joinUs{
+            visibility: collapse;
+            display: none;
+            margin-left: 10px;
+            transition: all .4s ease-in-out;
+            -moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -ms-transition: all .4s ease-in-out;
+            }
+            
+            .pencilcontainer:hover .joinUs{
+            visibility: visible;
+            display: inline-block;
+            }
+        
+
             /*Desktop*/
                 /*#region*/
+                @media screen and (min-width: 600px) 
+                {
+                    #jobsbox {
+                        padding: 10px 10% 50px 50px;
+                        width: 25%;
+                        min-width: 600px;
+                        position: relative;
+                        margin-bottom: 50px;
+                    }
+
+                    #jobsPageHeading {
+                        text-align: center;
+                        margin-top: 0px;
+                        width: 100%;
+                    }
+                }
                 /*#endregion*/
             /*Mobile*/
                 /*#region*/
+                @media screen and (max-width: 600px) {
+                    #jobsbox {
+                        padding: 10px 10px 10px 50px;
+                        background: rgba(255, 255, 255, 0.03);
+                        border-radius: 16px;
+                        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(5px);
+                        border: 1px solid rgba(255, 255, 255, 0.3);
+                    }
+
+                    #jobsPageHeading {
+                        text-align: center;
+                        margin-top: 0px;
+                    }
+                }
                 /*#endregion*/
         /*#endregion*/
     /*apply.html*/
