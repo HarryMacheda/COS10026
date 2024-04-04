@@ -34,9 +34,11 @@
 /* Set styling for the main element */
 main {
     width: 100%;
+    position: relative;
     color: var(--theme-text);
     padding-top: 50px;
     padding-bottom: 20px;
+    z-index: 100;
 }
 
 /* disable side scrollbar */ 
@@ -194,6 +196,23 @@ html, body {
                 .theme-dark.label{
                     color: var(--theme-text);
                 }
+        /*Common styling for labels*/
+            /*theme stylings*/
+            /*dark theme*/
+            .theme-dark.link:any-link {
+                color: var(--theme-active);
+            }
+        /*Common stylings for code*/
+            .code {
+                border: 1px solid white;
+                padding: 10px;
+                font-family: monospace;
+            }
+            /*dark theme*/
+            .theme-dark.code {
+                background-color: black;
+                color: var(--theme-white);
+            }
     /*#endregion*/
     /* Tables */
     /*#region*/
@@ -388,11 +407,37 @@ html, body {
         /*#endregion*/
     /*enhancement.html*/
         /*#region*/
+            #enhancePageHeading {
+                width: 100%;
+                text-align: center;
+            }
             /*Desktop*/
                 /*#region*/
+                @media screen and (min-width: 600px) {
+                    #enhanceMain div {
+                        margin: 20px;
+                        padding: 10px;
+                    }
+
+                    #enhanceFontIconDisplay span {
+                        margin-right: 50px;
+                        color: var(--theme-active);
+                    }
+                }
                 /*#endregion*/
             /*Mobile*/
                 /*#region*/
+                @media screen and (max-width: 600px) {
+                    #enhanceMain div {
+                        margin: 20px;
+                        padding: 10px;
+                    }
+
+                    #enhanceFontIconDisplay span {
+                        margin-right: 50px;
+                        color: var(--theme-active);
+                    }
+                }
                 /*#endregion*/
         /*#endregion*/
     /*notfound.html*/
