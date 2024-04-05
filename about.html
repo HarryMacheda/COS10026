@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="./styles/style.css">
-        <script src="https://kit.fontawesome.com/3832455239.js" crossorigin="anonymous"></script> <!-- Link to the font awesome icons -->
+        <meta charset="UTF-8">
+        <meta name="description" content="Group information">
+        <meta name="keywords" content="Tech Company, Nebula, Space, Jobs, Software">
+        <meta name="author" content="Harry Macheda">
+        <title>About Us</title>
+        <link rel="icon" type="image/x-icon" href="./tiny_logo.png">
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/all.css" />
+        <meta name="theme-color" content="#F3F1DC"/> <!-- set the theme colour so mobile browsers set the background colour -->
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- set the viewport so we know the browsers width for mobile layouts -->
     </head>
     <body>
         <nav>
             <!-- Nav bar
-            Each page has its own span
-            Inside the span is another span with a font awesome icon
-            This span is set to aria-hidden so it is ignored by screen readers
-            We want to hide this as otherwise it will read both icon and link which is redundent
-            Then we have a href with a link to the relevant page
-             -->
+              Each page has its own span
+              Inside the span is another span with a font awesome icon
+              This span is set to aria-hidden so it is ignored by screen readers
+              We want to hide this as otherwise it will read both icon and link which is redundent
+              Then we have a href with a link to the relevant page
+            -->
             <img src="./tiny_logo.png" alt="" />
-            <section>
-                <span><span class="fa-solid fa-house" aria-hidden="true"></span><a href="./index.html">Home</a></span>
-                <span><span class="fa-solid fa-user-tie" aria-hidden="true"></span><a href="./jobs.html">Jobs</a></span>
-                <span><span class="fa-solid fa-file-contract" aria-hidden="true"></span><a href="./apply.html">Application</a></span>
-                <span><span class="fa-solid fa-people-group" aria-hidden="true"></span><a href="./about.html">About Us</a></span>
-                <span><span class="fa-solid fa-star" aria-hidden="true"></span><a href="./enhancements.html">Enhancements</a></span>
+            <section id="navDesktop">
+              <span><span class="fa-solid fa-house" aria-hidden="true"></span><a href="./index.html">Home</a></span>
+              <span><span class="fa-solid fa-user-tie" aria-hidden="true"></span><a href="./jobs.html">Jobs</a></span>
+              <span><span class="fa-solid fa-file-contract" aria-hidden="true"></span><a href="./apply.html">Application</a></span>
+              <span><span class="fa-solid fa-people-group" aria-hidden="true"></span><a href="./about.html">About Us</a></span>
+              <span><span class="fa-solid fa-star" aria-hidden="true"></span><a href="./enhancements.html">Enhancements</a></span>
             </section>
-        </nav>
+            <section id="navMobile">
+              <span class="fa-solid fa-bars" aria-hidden="true" onclick=""></span>
+              <div>
+                <a href="./index.html"><span class="fa-solid fa-house" aria-hidden="true"></span>Home</a>
+                <a href="./jobs.html"><span class="fa-solid fa-user-tie" aria-hidden="true"></span>Jobs</a>
+                <a href="./apply.html"><span class="fa-solid fa-file-contract" aria-hidden="true"></span>Application</a>
+                <a href="./about.html"><span class="fa-solid fa-people-group" aria-hidden="true"></span>About Us</a>
+                <a href="./enhancements.html"><span class="fa-solid fa-star" aria-hidden="true"></span>Enhancements</a>
+              </div>
+            </section>
+          </nav>
         <main>
         <div>
             <h1 class="theme-light heading">Group Information</h1>
@@ -94,6 +112,8 @@
             <br>
             <br>
             <br>
+            <h3>Tristan Thorp</h3>
+            <p>I'm studying Computer Science with a double major in Software Developent and Cyber Security. I try to keep my timetable as slim as possible because I live in Gippsland so it takes me about 2 and a half hours to get to uni on any day I have classes. <br>I like to spend my free time playing video games and painting miniatures.</p>
             <a href="mailto:{group email}">Email us here</a>
         </div>
     </main>
