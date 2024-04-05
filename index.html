@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Landing page for the tech company Nebula">
+    <meta name="keywords" content="Tech Company, Nebula, Space, Jobs, Software">
+    <meta name="author" content="Harry Macheda">
     <title>NEBULA</title>
+    <link rel="icon" type="image/x-icon" href="./tiny_logo.png">
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/all.css" />
+    <meta name="theme-color" content="#F3F1DC"/> <!-- set the theme colour so mobile browsers set the background colour -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- set the viewport so we know the browsers width for mobile layouts -->
   </head>
 
   <body>
@@ -16,27 +23,22 @@
         Then we have a href with a link to the relevant page
       -->
       <img src="./tiny_logo.png" alt="" />
-      <section>
-        <span
-          ><span class="fa-solid fa-house" aria-hidden="true"></span
-          ><a href="./index.html">Home</a></span
-        >
-        <span
-          ><span class="fa-solid fa-user-tie" aria-hidden="true"></span
-          ><a href="./jobs.html">Jobs</a></span
-        >
-        <span
-          ><span class="fa-solid fa-file-contract" aria-hidden="true"></span
-          ><a href="./apply.html">Application</a></span
-        >
-        <span
-          ><span class="fa-solid fa-people-group" aria-hidden="true"></span
-          ><a href="./about.html">About Us</a></span
-        >
-        <span
-          ><span class="fa-solid fa-star" aria-hidden="true"></span
-          ><a href="./enhancements.html">Enhancements</a></span
-        >
+      <section id="navDesktop">
+        <span><span class="fa-solid fa-house" aria-hidden="true"></span><a href="./index.html">Home</a></span>
+        <span><span class="fa-solid fa-user-tie" aria-hidden="true"></span><a href="./jobs.html">Jobs</a></span>
+        <span><span class="fa-solid fa-file-contract" aria-hidden="true"></span><a href="./apply.html">Application</a></span>
+        <span><span class="fa-solid fa-people-group" aria-hidden="true"></span><a href="./about.html">About Us</a></span>
+        <span><span class="fa-solid fa-star" aria-hidden="true"></span><a href="./enhancements.html">Enhancements</a></span>
+      </section>
+      <section id="navMobile">
+        <span class="fa-solid fa-bars" aria-hidden="true" onclick=""></span>
+        <div>
+          <a href="./index.html"><span class="fa-solid fa-house" aria-hidden="true"></span>Home</a>
+          <a href="./jobs.html"><span class="fa-solid fa-user-tie" aria-hidden="true"></span>Jobs</a>
+          <a href="./apply.html"><span class="fa-solid fa-file-contract" aria-hidden="true"></span>Application</a>
+          <a href="./about.html"><span class="fa-solid fa-people-group" aria-hidden="true"></span>About Us</a>
+          <a href="./enhancements.html"><span class="fa-solid fa-star" aria-hidden="true"></span>Enhancements</a>
+        </div>
       </section>
     </nav>
     <main>
@@ -46,8 +48,7 @@
       <div class="welcome-text">
         <h1>REINVENT WHAT YOUR NETWORK COULD BE</h1>
       </div>
-    </main>
-    <div class="description">
+      <div class="description">
       <h4>
         Despite there are hundreds of digital marketing companies, there are
         just a few individuals that are all-inclusive, highly responsive, and
@@ -57,6 +58,7 @@
         and Perth.
       </h4>
     </div>
+    </main>
     <span class="circle fa-solid fa-star" id="circle_0_0"></span
     ><span class="circle fa-solid fa-star" id="circle_0_1"></span
     ><span class="circle fa-solid fa-star" id="circle_0_2"></span
