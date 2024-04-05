@@ -435,6 +435,9 @@ html, body {
                 /*#region*/
                 @media screen and (min-width: 600px) 
                 {
+                    #applyformcontainer div{
+                        width: 50%;
+                    }
 
                     #applyForm {
                         padding: 10px 10px 10px 50px;
