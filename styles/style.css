@@ -323,7 +323,38 @@ html, body {
             /*Mobile*/
                 /*#region*/
                 @media screen and (max-width: 600px){
+                    .welcome-text {
+                        float: none; 
+                        width: 100%; 
+                        height: auto; 
+                        text-align: center;
+                        position: static; 
+                        margin-right: 0; 
+                    }
+                    
+                    .welcome-text h1 {
+                        font-size: 40px;
+                        color: #fff;
+                    }
+                    
+                    .welcome-text a {
+                        margin-top: 10px; 
+                    }
+                
+                    .logo {
+                        float: none; 
+                        width: 100%; 
+                        margin-bottom: 20px; 
+                    }
 
+                    .description {
+                        text-align: center;
+                        position: static; 
+                        width: 100%; 
+                        bottom: auto;
+                        margin-right: 0; 
+                        color: #fff;
+                    }
                 }
                 /*#endregion*/
         /*#endregion*/
