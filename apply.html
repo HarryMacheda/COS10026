@@ -45,7 +45,7 @@
             <div id="applyformcontainer">
                 <div class="glasspane">
                     <form id="applyForm" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
-                        <label class="theme-dark label" for="reference"></span>Job reference number: </label>
+                        <label class="theme-dark label" for="reference">Job reference number: </label>
                         <input class="theme-dark inputnumber" type="text" id="reference" name="reference" pattern="[0-9a-zA-Z]{5}" required="required"><br>
                         <label class="theme-dark label" for="firstname">First name: </label>
                         <input class="theme-dark inputtext" type="text" id="firstname" name="firstname" pattern="[a-zA-Z]{1,20}"  required="required"><br>
@@ -95,7 +95,7 @@
                         </select>
                         <br>
                         <label class="theme-dark label" for="postcode">Postcode: </label>
-                        <input class="theme-dark inputnumber" type="number" id="postcode" name="postcode" pattern="[0-9]{4}" required="required"><br>
+                        <input class="theme-dark inputnumber" type="text" id="postcode" name="postcode" pattern="[0-9]{4}" required="required"><br>
                         <label class="theme-dark label" for="email">Email: </label>
                         <input class="theme-dark inputtext" type="text" id="email" name="email"  required="required"><br>
                         <label class="theme-dark label" for="phone">Phone: </label>
@@ -173,7 +173,7 @@
                             </span>
                         </fieldset><br><br>
                         <label class="theme-dark label" for="otherskills">Other skills: </label>
-                        <textarea class="theme-dark inputtext" type="textarea" id="otherskills" name="otherskills" rows="4" cols="30"></textarea><br><br>
+                        <textarea class="theme-dark inputtext" id="otherskills" name="otherskills" rows="4" cols="30"></textarea><br><br>
                         <input class="theme-dark submit" type="submit" value="Apply">&nbsp;<input class="theme-dark submit" type="reset" value="Reset Form">
                     </form>
                 </div>
