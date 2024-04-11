@@ -627,6 +627,18 @@ html, body {
         /*#endregion*/
     /*enhancement.html*/
         /*#region*/
+
+            #enhancementsContainers {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                justify-items: center;
+                align-items: center;
+            }
+            #enhancementsContainers div {
+                clear: both;
+            }
             #enhancePageHeading {
                 width: 100%;
                 text-align: center;
@@ -634,9 +646,11 @@ html, body {
             /*Desktop*/
                 /*#region*/
                 @media screen and (min-width: 600px) {
-                    #enhanceMain div {
+                    #enhancementsContainers div {
+                        width: 50%;
                         margin: 20px;
                         padding: 10px;
+                        position: relative;
                     }
 
                     #enhanceFontIconDisplay span {
@@ -648,7 +662,7 @@ html, body {
             /*Mobile*/
                 /*#region*/
                 @media screen and (max-width: 600px) {
-                    #enhanceMain div {
+                    #enhancementsContainers div {
                         margin: 20px;
                         padding: 10px;
                     }
