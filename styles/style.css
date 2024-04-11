@@ -26,7 +26,7 @@
 :root {
     --theme-dark: #0E2336;
     --theme-dark-alt: #201F41;
-    --theme-text: #D1788F;
+    --theme-text: #D1788F; /* #DD9DAD this gets us 100% contrast compliance */
     --theme-highlight: #4A2044;
     --theme-active: #FFDB71;
     --theme-white:#F3F1DC;
@@ -358,9 +358,13 @@ html, body {
                 }
                 /*#endregion*/
         /*#endregion*/
+
+
     /*jobs.html*/
         /*#region*/
-        #jobscontainer {
+
+
+        .jobscontainer {
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -368,20 +372,37 @@ html, body {
             z-index: 3;
         }
 
+        .asideLinkList {
+            display: flexbox;
+            position: fixed;
+            align-items: left;
+            right: 1%;
+            margin-left: 1%; 
+            width: 25%; 
+            padding-left: 1em;
+            padding-bottom: 16em;
+        }
+
+        .asideLink {
+            color: var(--theme-white);
+        }
+
+        .applylink {
+            text-decoration: none;
+            text-decoration-color: var(--theme-white);
+        }
+
         .pencilcontainer {
-            display: flex;
-            padding: 2%;
-            position: absolute;
-            right: 10%;
-            bottom: 10%;
+            display: flexbox;
+            padding: 1%;
+            position: fixed;
+            right: 18%;
+            bottom: 9em;
             transition: all .4s ease-in-out;
-            -moz-transition: all .4s ease-in-out;
-            -o-transition: all .4s ease-in-out;
-            -ms-transition: all .4s ease-in-out;
         }
 
         .pencilcontainer:hover { 
-            padding-right: 40%;
+            padding-right: 10%;
             margin-left: 10%;
         }
 
@@ -392,53 +413,52 @@ html, body {
         }
 
         .pencilicon:hover {
-            -webkit-transform: scale(1.2);
             transform: scale(1.2,1.2);
-            -ms-transform: scale(1.2,1.2); /* IE 9 */
-            -webkit-transform: scale(1.2,1.2); /* Safari and Chrome */
-
-            /*used from: https://codepen.io/Cheesetoast/pen/nmWmBM*/
         }
 
         .joinUs{
             visibility: collapse;
             display: none;
+            text-decoration: none;
+            color: var(--theme-white);
             margin-left: 10px;
             transition: all .4s ease-in-out;
-            -moz-transition: all .4s ease-in-out;
-            -o-transition: all .4s ease-in-out;
-            -ms-transition: all .4s ease-in-out;
             }
             
             .pencilcontainer:hover .joinUs{
             visibility: visible;
             display: inline-block;
+            text-decoration: none;
             }
+
         
 
             /*Desktop*/
                 /*#region*/
-                @media screen and (min-width: 600px) 
+                @media screen and (min-width: 700px) 
                 {
-                    #jobsbox {
-                        padding: 10px 10% 50px 50px;
-                        width: 25%;
-                        min-width: 600px;
+                    .jobsbox {
+                        padding: 5% 2%;
+                        width: 50%;
+                        min-width: 450px;
                         position: relative;
                         margin-bottom: 50px;
+                        margin-right: 20%;
                     }
 
                     #jobsPageHeading {
                         text-align: center;
                         margin-top: 0px;
                         width: 100%;
+                        color: var(--theme-white);
+                        margin-bottom: 2em;
                     }
                 }
                 /*#endregion*/
             /*Mobile*/
                 /*#region*/
-                @media screen and (max-width: 600px) {
-                    #jobsbox {
+                @media screen and (max-width: 700px) {
+                    .jobsbox {
                         padding: 10px 10px 10px 50px;
                         background: rgba(255, 255, 255, 0.03);
                         border-radius: 16px;
@@ -447,9 +467,16 @@ html, body {
                         border: 1px solid rgba(255, 255, 255, 0.3);
                     }
 
+                    .asideLinkList {
+                        display: none;
+                    }
+
                     #jobsPageHeading {
                         text-align: center;
                         margin-top: 0px;
+                        width: 100%;
+                        color: var(--theme-white);
+                        margin-bottom: 2em;
                     }
                 }
                 /*#endregion*/
