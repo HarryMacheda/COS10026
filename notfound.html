@@ -1,13 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="Index.css">
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/all.css" />
     </head>
     <body>
-        <div style="margin: auto; width: 50%; text-align: center;">
-            Whoops this page is not found! <br>
-            <a href="index.html">Click here  to go home</a>
-        </div>
+        <nav>
+            <!-- Nav bar
+              Each page has its own span
+              Inside the span is another span with a font awesome icon
+              This span is set to aria-hidden so it is ignored by screen readers
+              We want to hide this as otherwise it will read both icon and link which is redundent
+              Then we have a href with a link to the relevant page
+            -->
+            <img src="./tiny_logo.png" alt="" />
+            <section id="navDesktop">
+              <span><span class="fa-solid fa-house" aria-hidden="true"></span><a href="./index.html">Home</a></span>
+              <span><span class="fa-solid fa-user-tie" aria-hidden="true"></span><a href="./jobs.html">Jobs</a></span>
+              <span><span class="fa-solid fa-file-contract" aria-hidden="true"></span><a href="./apply.html">Application</a></span>
+              <span><span class="fa-solid fa-people-group" aria-hidden="true"></span><a href="./about.html">About Us</a></span>
+              <span><span class="fa-solid fa-star" aria-hidden="true"></span><a href="./enhancements.html">Enhancements</a></span>
+            </section>
+            <section id="navMobile">
+              <span class="fa-solid fa-bars" aria-hidden="true" onclick=""></span>
+              <div>
+                <a href="./index.html"><span class="fa-solid fa-house" aria-hidden="true"></span>Home</a>
+                <a href="./jobs.html"><span class="fa-solid fa-user-tie" aria-hidden="true"></span>Jobs</a>
+                <a href="./apply.html"><span class="fa-solid fa-file-contract" aria-hidden="true"></span>Application</a>
+                <a href="./about.html"><span class="fa-solid fa-people-group" aria-hidden="true"></span>About Us</a>
+                <a href="./enhancements.html"><span class="fa-solid fa-star" aria-hidden="true"></span>Enhancements</a>
+              </div>
+            </section>
+          </nav>
+        <main>
+            <div id="notFoundConatiner">
+                <div class="glasspane">
+                    <section id="notFoundTextContainer">
+                        <h1>Oops!</h1>
+                        <h2>Error 404 - Page could not be found</h2>
+                        <p>
+                            Looks like the stars have gone out!<br>
+                            We could use new developers to keep our website running <br>
+                            Come apply <a class="theme-dark link" href="apply.html">Here!</a>
+                        </p>
+                    </section>
+                </div>
+            </div>
+        </main>
     </body>
 </html>
