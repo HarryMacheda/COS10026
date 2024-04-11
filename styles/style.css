@@ -260,6 +260,9 @@ html, body {
                         width: 50%;
                         height: 300px;
                         text-align: center;
+                        position: relative;
+                        right: 10%;
+                        
                     }
                     
                     .welcome-text h1{
@@ -288,11 +291,71 @@ html, body {
                     .logo {
                         float: left;
                         width: 50%;
+                    }   
+
+                    .description {
+                        text-align: center;
+                        position: relative;
+                        right: 10%;
+                        color: #fff;
+                        font-size: large;
+                        float: right;
+                        width: 50%;
+                        bottom: 70%;
                     }
-                }        
+
+                    /* style */
+                    @keyframes wave-animation {
+                        0%,
+                        100% {
+                          transform: rotate(0deg);
+                        }
+                        25% {
+                          transform: rotate(20deg);
+                        }
+                        75% {
+                          transform: rotate(-15deg);
+                        }
+                    }   
+                    /* end footer */
+                }     
                 /*#endregion*/
             /*Mobile*/
                 /*#region*/
+                @media screen and (max-width: 600px){
+                    .welcome-text {
+                        float: none; 
+                        width: 100%; 
+                        height: auto; 
+                        text-align: center;
+                        position: static; 
+                        margin-right: 0; 
+                    }
+                    
+                    .welcome-text h1 {
+                        font-size: 40px;
+                        color: #fff;
+                    }
+                    
+                    .welcome-text a {
+                        margin-top: 10px; 
+                    }
+                
+                    .logo {
+                        float: none; 
+                        width: 100%; 
+                        margin-bottom: 20px; 
+                    }
+
+                    .description {
+                        text-align: center;
+                        position: static; 
+                        width: 100%; 
+                        bottom: auto;
+                        margin-right: 0; 
+                        color: #fff;
+                    }
+                }
                 /*#endregion*/
         /*#endregion*/
 
@@ -430,6 +493,9 @@ html, body {
                 /*#region*/
                 @media screen and (min-width: 600px) 
                 {
+                    #applyformcontainer div{
+                        width: 50%;
+                    }
 
                     #applyForm {
                         padding: 10px 10px 10px 50px;
@@ -689,10 +755,45 @@ html, body {
     footer {        
         width: 100%;
         height: 50px;
+        z-index: 90;
     }
     /*styling*/
     footer {
         background-color: var(--theme-white);
+        color: var(--theme-highlight);
+    }
+
+    /* footer */
+    footer p:first-child {
+        float:left;
+        text-align: left;
+        position: relative;
+        left: 1%;
+    }
+
+    footer div a:last-child:hover {
+        animation: wave-animation 0.3s infinite;
+    }
+    footer p {
+        display: inline-block;
+        width: 30%;
+    }
+    footer div {
+        width: 50%;
+        height: 100%;
+        float: right;
+        display: flex;
+        justify-content: right;
+    }
+
+    footer div a {
+        text-decoration: none;
+        display: inline-block;
+        width: 10%;
+        padding: 15px;
+        height: auto;
+        line-height: 100%;
+        text-align: center;
     }
 /*#endregion*/
 
