@@ -248,6 +248,10 @@ html, body {
                     background-color: var(--theme-dark-alt);
                 }
 
+                .theme-dark.table tr td{
+                    background-color: var(--theme-white);
+                }
+
                 .theme-dark.table tr td:first-child {
                     background-color: var(--theme-dark-alt);
                 }
@@ -546,22 +550,22 @@ html, body {
     /*about.html*/
         /*#region*/
             .class-cos10026 {
-                background-color: aqua;
+                background-color: aqua !important;
                 border: none !important;
                 color: black;
             }
             .class-cos30008 {
-                background-color: brown;
+                background-color: brown !important;
                 border: none !important;
                 color: black;
             }
             .class-eee20006 {
-                background-color: greenyellow;
+                background-color: greenyellow !important;
                 border: none !important;
                 color: black;
             }
             .class-cos40003 {
-                background-color: orange;
+                background-color: orange !important;
                 border: none !important;
                 color: black;
             }
