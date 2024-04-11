@@ -852,6 +852,11 @@ html, body {
         line-height: 100%;
         text-align: center;
     }
+
+    footer div a:any-link
+    {
+        color: var(--theme-highlight);
+    }
 /*#endregion*/
 
 /*Style for background*/
