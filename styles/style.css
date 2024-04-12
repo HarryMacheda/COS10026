@@ -231,6 +231,25 @@ html, body {
                     background-color: var(--theme-dark-alt);
                     color: var(--theme-text);
                 }
+     /* Definition List */ 
+      /*#region*/ 
+      dl {
+       
+        padding: 0.5em;
+      }
+      dt {
+        float: left;
+        clear: left;
+        width: 100px;
+        text-align: right;
+      }
+      dt::after {
+        content: ":";
+      }
+      dd {
+        margin: 0 0 0 120px;
+        padding: 0 0 0.5em 0; 
+      } 
     /*#endregion*/
     /* Glass Panes */
     /*#region*/
@@ -617,11 +636,64 @@ html, body {
                 /*#endregion*/
         /*#endregion*/
     /*about.html*/
+
         /*#region*/
+        #aboutUsHeading { 
+            text-align: center;
+        }
+
+        #aboutUsInfo {
+            float:left;
+            clear:left
+        }
+        
+        #aboutUsPhoto {
+            float:right;
+            clear:right
+        }
+
+        #aboutUsTimeTable {
+            clear:both
+        }
+
+        #aboutUsroupProfile {
+            clear:both
+        }
+    
+
             /*Desktop*/
                 /*#region*/
+                @media screen and (min-width: 600px) 
+                {
+              .aboutUsBox {
+
+                        padding: 10px 10px 10px 50px;
+                        width: 70%;
+                        margin: 20px;
+                        display: block;
+                        margin-left :auto;
+                        margin-right :auto;
+                        
+                    }
+                    }
                 /*#endregion*/
             /*Mobile*/
+            @media screen and (max-width: 600px) {
+                .aboutUsBox {
+                padding: 10px 10px 10px 50px;
+                width: 80%;
+                margin: 10px;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            #groupPhoto{
+                max-width: 50%;
+                max-height: 50%;
+                
+            }
+        }
+
                 /*#region*/
                 /*#endregion*/
         /*#endregion*/
