@@ -26,7 +26,7 @@
 :root {
     --theme-dark: #0E2336;
     --theme-dark-alt: #201F41;
-    --theme-text: #D1788F; /* #DD9DAD this gets us 100% contrast compliance */
+    --theme-text: #DD9DAD; 
     --theme-highlight: #4A2044;
     --theme-active: #FFDB71;
     --theme-white:#F3F1DC;
@@ -249,8 +249,19 @@ html, body {
 /*Styling for pages*/
 /*#region*/
     /*index.html*/
-        /*#region*/
-            
+        /*#region*/       
+            .welcome-text h1 {
+                position: absolute;
+            }
+
+            .logo p{
+                top: 10%;
+                left: 5%;
+                width: 25%;
+                height: 40%;
+                position: absolute;
+            }
+
             /*Desktop*/
                 /*#region*/
                 @media screen and (min-width: 600px)
@@ -627,6 +638,18 @@ html, body {
         /*#endregion*/
     /*enhancement.html*/
         /*#region*/
+
+            #enhancementsContainers {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                justify-items: center;
+                align-items: center;
+            }
+            #enhancementsContainers div {
+                clear: both;
+            }
             #enhancePageHeading {
                 width: 100%;
                 text-align: center;
@@ -634,9 +657,11 @@ html, body {
             /*Desktop*/
                 /*#region*/
                 @media screen and (min-width: 600px) {
-                    #enhanceMain div {
+                    #enhancementsContainers div {
+                        width: 50%;
                         margin: 20px;
                         padding: 10px;
+                        position: relative;
                     }
 
                     #enhanceFontIconDisplay span {
@@ -648,7 +673,7 @@ html, body {
             /*Mobile*/
                 /*#region*/
                 @media screen and (max-width: 600px) {
-                    #enhanceMain div {
+                    #enhancementsContainers div {
                         margin: 20px;
                         padding: 10px;
                     }
@@ -662,11 +687,43 @@ html, body {
         /*#endregion*/
     /*notfound.html*/
        /*#region*/
+            #notFoundConatiner {
+                width: 100%;
+                justify-items: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
             /*Desktop*/
                 /*#region*/
+                @media screen and (min-width: 600px) {
+                    #notFoundConatiner div {
+                        width: 40%;
+                        padding: 5%;
+                        text-align: center;
+                    }
+
+                    #notFoundTextContainer {
+                        text-align: left;
+                        float: left;
+                        width: 60%;
+                    }
+                }
                 /*#endregion*/
             /*Mobile*/
                 /*#region*/
+                @media screen and (max-width: 600px) {
+                    #notFoundConatiner div {
+                        width: 60%;
+                        padding: 5%;
+                        text-align: center;
+                    }
+
+                    #notFoundTextContainer {
+                        text-align: left;
+                        width: 100%;
+                    }
+                }
                 /*#endregion*/
         /*#endregion*/
 /*#endregion*/
@@ -795,6 +852,11 @@ html, body {
         line-height: 100%;
         text-align: center;
     }
+
+    footer div a:any-link
+    {
+        color: var(--theme-highlight);
+    }
 /*#endregion*/
 
 /*Style for background*/
@@ -830,7 +892,86 @@ html, body {
 #circle_0_0{position: absolute;top:38%;left:80%;animation-name: starAnimation;animation-delay:990ms;font-size: 10px}#circle_0_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_0_1{position: absolute;top:31%;left:82%;animation-name: starAnimation;animation-delay:4739ms;font-size: 9px}#circle_0_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_0_2{position: absolute;top:43%;left:79%;animation-name: starAnimation;animation-delay:1299ms;font-size: 15px}#circle_0_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_0_3{position: absolute;top:26%;left:80%;animation-name: starAnimation;animation-delay:969ms;font-size: 13px}#circle_0_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_1_0{position: absolute;top:65%;left:61%;animation-name: starAnimation;animation-delay:3060ms;font-size: 17px}#circle_1_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_1_1{position: absolute;top:55%;left:75%;animation-name: starAnimation;animation-delay:1023ms;font-size: 19px}#circle_1_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_1_2{position: absolute;top:61%;left:69%;animation-name: starAnimation;animation-delay:4507ms;font-size: 16px}#circle_1_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_1_3{position: absolute;top:56%;left:73%;animation-name: starAnimation;animation-delay:1561ms;font-size: 9px}#circle_1_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_1_4{position: absolute;top:66%;left:79%;animation-name: starAnimation;animation-delay:109ms;font-size: 8px}#circle_1_4:hover {transform: scale(1.5);color: white; animation:none;}#circle_2_0{position: absolute;top:63%;left:18%;animation-name: starAnimation;animation-delay:1734ms;font-size: 10px}#circle_2_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_2_1{position: absolute;top:59%;left:9%;animation-name: starAnimation;animation-delay:424ms;font-size: 17px}#circle_2_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_2_2{position: absolute;top:60%;left:19%;animation-name: starAnimation;animation-delay:1204ms;font-size: 20px}#circle_2_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_2_3{position: absolute;top:70%;left:22%;animation-name: starAnimation;animation-delay:1339ms;font-size: 19px}#circle_2_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_3_0{position: absolute;top:16%;left:6%;animation-name: starAnimation;animation-delay:575ms;font-size: 19px}#circle_3_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_3_1{position: absolute;top:6%;left:13%;animation-name: starAnimation;animation-delay:2382ms;font-size: 11px}#circle_3_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_3_2{position: absolute;top:21%;left:11%;animation-name: starAnimation;animation-delay:4263ms;font-size: 16px}#circle_3_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_4_0{position: absolute;top:79%;left:72%;animation-name: starAnimation;animation-delay:4372ms;font-size: 15px}#circle_4_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_4_1{position: absolute;top:79%;left:72%;animation-name: starAnimation;animation-delay:1062ms;font-size: 19px}#circle_4_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_4_2{position: absolute;top:88%;left:65%;animation-name: starAnimation;animation-delay:2675ms;font-size: 9px}#circle_4_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_4_3{position: absolute;top:90%;left:79%;animation-name: starAnimation;animation-delay:2218ms;font-size: 12px}#circle_4_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_5_0{position: absolute;top:74%;left:64%;animation-name: starAnimation;animation-delay:3758ms;font-size: 10px}#circle_5_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_5_1{position: absolute;top:77%;left:64%;animation-name: starAnimation;animation-delay:3921ms;font-size: 19px}#circle_5_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_5_2{position: absolute;top:81%;left:46%;animation-name: starAnimation;animation-delay:4746ms;font-size: 20px}#circle_5_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_5_3{position: absolute;top:75%;left:62%;animation-name: starAnimation;animation-delay:2786ms;font-size: 19px}#circle_5_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_6_0{position: absolute;top:45%;left:9%;animation-name: starAnimation;animation-delay:3265ms;font-size: 8px}#circle_6_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_6_1{position: absolute;top:43%;left:7%;animation-name: starAnimation;animation-delay:1209ms;font-size: 12px}#circle_6_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_6_2{position: absolute;top:55%;left:8%;animation-name: starAnimation;animation-delay:38ms;font-size: 12px}#circle_6_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_7_0{position: absolute;top:22%;left:22%;animation-name: starAnimation;animation-delay:4547ms;font-size: 16px}#circle_7_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_7_1{position: absolute;top:28%;left:24%;animation-name: starAnimation;animation-delay:525ms;font-size: 11px}#circle_7_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_7_2{position: absolute;top:24%;left:12%;animation-name: starAnimation;animation-delay:1772ms;font-size: 8px}#circle_7_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_7_3{position: absolute;top:32%;left:11%;animation-name: starAnimation;animation-delay:3522ms;font-size: 20px}#circle_7_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_8_0{position: absolute;top:14%;left:59%;animation-name: starAnimation;animation-delay:2829ms;font-size: 13px}#circle_8_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_8_1{position: absolute;top:8%;left:72%;animation-name: starAnimation;animation-delay:1346ms;font-size: 9px}#circle_8_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_8_2{position: absolute;top:27%;left:59%;animation-name: starAnimation;animation-delay:430ms;font-size: 14px}#circle_8_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_8_3{position: absolute;top:22%;left:61%;animation-name: starAnimation;animation-delay:3004ms;font-size: 16px}#circle_8_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_8_4{position: absolute;top:25%;left:62%;animation-name: starAnimation;animation-delay:2230ms;font-size: 13px}#circle_8_4:hover {transform: scale(1.5);color: white; animation:none;}#circle_9_0{position: absolute;top:36%;left:83%;animation-name: starAnimation;animation-delay:3939ms;font-size: 17px}#circle_9_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_9_1{position: absolute;top:38%;left:84%;animation-name: starAnimation;animation-delay:1756ms;font-size: 18px}#circle_9_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_9_2{position: absolute;top:35%;left:71%;animation-name: starAnimation;animation-delay:4379ms;font-size: 19px}#circle_9_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_9_3{position: absolute;top:26%;left:83%;animation-name: starAnimation;animation-delay:2341ms;font-size: 9px}#circle_9_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_9_4{position: absolute;top:22%;left:88%;animation-name: starAnimation;animation-delay:2962ms;font-size: 9px}#circle_9_4:hover {transform: scale(1.5);color: white; animation:none;}#circle_10_0{position: absolute;top:77%;left:42%;animation-name: starAnimation;animation-delay:703ms;font-size: 9px}#circle_10_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_10_1{position: absolute;top:84%;left:37%;animation-name: starAnimation;animation-delay:1046ms;font-size: 10px}#circle_10_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_10_2{position: absolute;top:86%;left:33%;animation-name: starAnimation;animation-delay:559ms;font-size: 14px}#circle_10_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_11_0{position: absolute;top:48%;left:26%;animation-name: starAnimation;animation-delay:2058ms;font-size: 19px}#circle_11_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_11_1{position: absolute;top:35%;left:30%;animation-name: starAnimation;animation-delay:3730ms;font-size: 17px}#circle_11_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_11_2{position: absolute;top:51%;left:30%;animation-name: starAnimation;animation-delay:771ms;font-size: 16px}#circle_11_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_12_0{position: absolute;top:44%;left:41%;animation-name: starAnimation;animation-delay:4488ms;font-size: 12px}#circle_12_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_12_1{position: absolute;top:33%;left:30%;animation-name: starAnimation;animation-delay:4703ms;font-size: 11px}#circle_12_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_12_2{position: absolute;top:32%;left:33%;animation-name: starAnimation;animation-delay:15ms;font-size: 11px}#circle_12_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_13_0{position: absolute;top:11%;left:45%;animation-name: starAnimation;animation-delay:371ms;font-size: 9px}#circle_13_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_13_1{position: absolute;top:7%;left:42%;animation-name: starAnimation;animation-delay:2529ms;font-size: 10px}#circle_13_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_13_2{position: absolute;top:6%;left:31%;animation-name: starAnimation;animation-delay:3283ms;font-size: 19px}#circle_13_2:hover {transform: scale(1.5);color: white; animation:none;}#circle_13_3{position: absolute;top:18%;left:32%;animation-name: starAnimation;animation-delay:764ms;font-size: 8px}#circle_13_3:hover {transform: scale(1.5);color: white; animation:none;}#circle_14_0{position: absolute;top:65%;left:27%;animation-name: starAnimation;animation-delay:4566ms;font-size: 8px}#circle_14_0:hover {transform: scale(1.5);color: white; animation:none;}#circle_14_1{position: absolute;top:72%;left:24%;animation-name: starAnimation;animation-delay:2040ms;font-size: 20px}#circle_14_1:hover {transform: scale(1.5);color: white; animation:none;}#circle_14_2{position: absolute;top:57%;left:33%;animation-name: starAnimation;animation-delay:199ms;font-size: 10px}#circle_14_2:hover {transform: scale(1.5);color: white; animation:none;}
 
 
+/*Glitch Effect*/
+
+.welcome-text h1:nth-child(1) {
+    color: #00ddff;
+    animation: glitch1 3s infinite;
+}
+
+.welcome-text h1:nth-child(2) {
+    color: #ff00f2;
+    animation: glitch2 3s infinite;
+}
 
 
+@keyframes glitch1 {
+    0% {
+        display: none;
+    }
 
+    40%{
+        transform: none;
+    }
 
+    45% {
+        display: block;
+        transform: translate(5px,5px);
+    }
+
+    75% {
+        transform: none;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+@keyframes glitch2 {
+    0% {
+        display: none;
+    }
+
+    40%{
+        transform: none;
+    }
+
+    45% {
+        display: block;
+        transform: translate(-5px,-5px);
+    }
+
+    75% {
+        transform: none;
+    }
+
+    100% {
+        display: none;
+    }
+}
+
+/*Image glitch*/
+.logo p{
+    animation: glitchImage 6s infinite;
+}
+
+@keyframes glitchImage {
+    0% {
+        display: none;
+    }
+
+    50% {
+    }
+
+    30% {
+        display: none;
+    }
+    
+    50% {
+    }
+
+    70% {
+        display: none;
+    }
+}
