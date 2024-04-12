@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Group information" />
-    <meta
-      name="keywords"
-      content="Tech Company, Nebula, Space, Jobs, Software"
-    />
-    <meta name="author" content="Harry Macheda" />
+    <meta charset="UTF-8" >
+    <meta name="description" content="Group information" >
+    <meta name="keywords" content="Tech Company, Nebula, Space, Jobs, Software">
+    <meta name="author" content="Harry Macheda">
     <title>About Us</title>
-    <link rel="icon" type="image/x-icon" href="./tiny_logo.png" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/all.css" />
-    <meta name="theme-color" content="#F3F1DC" />
+    <link rel="icon" type="image/x-icon" href="./tiny_logo.png" >
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/all.css">
+    <meta name="theme-color" content="#F3F1DC">
     <!-- set the theme colour so mobile browsers set the background colour -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- set the viewport so we know the browsers width for mobile layouts -->
   </head>
   <body>
-      <nav>
+    <nav>
       <!-- Nav bar
-              Each page has its own span
-              Inside the span is another span with a font awesome icon
-              This span is set to aria-hidden so it is ignored by screen readers
-              We want to hide this as otherwise it will read both icon and link which is redundent
-              Then we have a href with a link to the relevant page
-            -->
-            <img src="./images/tiny_logo.png" alt="" />
-            <section id="navDesktop">
-              <span><span class="fa-solid fa-house" aria-hidden="true"></span><a href="./index.html">Home</a></span>
-              <span><span class="fa-solid fa-user-tie" aria-hidden="true"></span><a href="./jobs.html">Jobs</a></span>
-              <span><span class="fa-solid fa-file-contract" aria-hidden="true"></span><a href="./apply.html">Application</a></span>
-              <span><span class="fa-solid fa-people-group" aria-hidden="true"></span><a href="./about.html">About Us</a></span>
-              <span><span class="fa-solid fa-star" aria-hidden="true"></span><a href="./enhancements.html">Enhancements</a></span>
-            </section>
-            <section id="navMobile">
-              <span class="fa-solid fa-bars" aria-hidden="true" onclick=""></span>
-              <div>
-                <a href="./index.html"><span class="fa-solid fa-house" aria-hidden="true"></span>Home</a>
-                <a href="./jobs.html"><span class="fa-solid fa-user-tie" aria-hidden="true"></span>Jobs</a>
-                <a href="./apply.html"><span class="fa-solid fa-file-contract" aria-hidden="true"></span>Application</a>
-                <a href="./about.html"><span class="fa-solid fa-people-group" aria-hidden="true"></span>About Us</a>
-                <a href="./enhancements.html"><span class="fa-solid fa-star" aria-hidden="true"></span>Enhancements</a>
-              </div>
-            </section>
+          Each page has its own span
+          Inside the span is another span with a font awesome icon
+          This span is set to aria-hidden so it is ignored by screen readers
+          We want to hide this as otherwise it will read both icon and link which is redundent
+          Then we have a href with a link to the relevant page
+      -->
+        <img src="./images/tiny_logo.png" alt="">
+          <div id="navDesktop">
+            <a href="./index.html"><span class="fa-solid fa-house" aria-hidden="true"></span>Home</a>
+            <a href="./jobs.html"><span class="fa-solid fa-user-tie" aria-hidden="true"></span>Jobs</a>
+            <a href="./apply.html"><span class="fa-solid fa-file-contract" aria-hidden="true"></span>Application</a>
+            <a href="./about.html"><span class="fa-solid fa-people-group" aria-hidden="true"></span>About Us</a>
+            <a href="./enhancements.html"><span class="fa-solid fa-star" aria-hidden="true"></span>Enhancements</a>
+          </div>
+          <div id="navMobile">
+            <span class="fa-solid fa-bars" aria-hidden="true" onclick=""></span>
+            <div>
+              <a href="./index.html"><span class="fa-solid fa-house" aria-hidden="true"></span>Home</a>
+              <a href="./jobs.html"><span class="fa-solid fa-user-tie" aria-hidden="true"></span>Jobs</a>
+              <a href="./apply.html"><span class="fa-solid fa-file-contract" aria-hidden="true"></span>Application</a>
+              <a href="./about.html"><span class="fa-solid fa-people-group" aria-hidden="true"></span>About Us</a>
+              <a href="./enhancements.html"><span class="fa-solid fa-star" aria-hidden="true"></span>Enhancements</a>
+            </div>
+            </div>
       </nav>
       <main>
             <h1 class="theme-light heading" id="aboutUsHeading">About Us</h1>
                 <div class="glasspane aboutUsBox">
                     <section id="aboutUsInfo">
-                      <h1 class="theme-light heading" id="aboutUsBody">Group Information</h1>
+                      <h2 class="theme-light heading" id="aboutUsBody">Group Information</h2>
                       <dl class="aboutUsDefinitonList">
                           
                           <dt class="theme-light heading">Group Name</dt>
@@ -61,14 +58,14 @@
                       </dl>
                   </section>
                   <section id="aboutUsPhoto">
-                      <h1 class="theme-light heading" id="groupPhotoHeading">Group Photo</h1>
+                      <h2 class="theme-light heading" id="groupPhotoHeading">Group Photo</h2>
                       <img src="./images/groupphoto.png" id="groupPhoto" alt="Photo of the group members" >
                   </section>
                 
-                <h1 class="theme-light heading">Timetable</h1>
+                <h2 class="theme-light heading">Timetable</h2>
                   <table id="aboutTtimetable" class="theme-dark table">
                       <tr>
-                          <th></th>
+                          <th>Time</th>
                           <th>Monday</th>
                           <th>Tuesday</th>
                           <th>Wednesday</th>
@@ -114,13 +111,13 @@
               <br>
               <br>
               <br>
-              <h3>Harry Macheda</h2>
+              <h3>Harry Macheda</h3>
                   <p>
                       Harry is 21 years old and completing a Bachelor of Engineering majoring in software,
                       he works as a software developer at Loop Software. In his spare time harry looks after
                       his cat named Lucy, reads books, and roller skates.
                   </p>
-                  <label for="harry-skills">Skills</label>
+                  <p >Skills</p>
                   <ul id="harry-skills">
                       <li>HTML</li>
                       <li>CSS</li>
@@ -148,7 +145,7 @@
               I spend most of my free time reading and playing video games.  
               </p>
 
-              <a href="mailto:{group email}">Email us here</a>
+              <a class="theme-dark link" href="mailto:103603101@student.swin.edu.au">Email us here</a>
             </div>
       </main>
     <span class="circle fa-solid fa-star" id="circle_0_0"></span
