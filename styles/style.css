@@ -241,12 +241,10 @@ html, body {
         /*Common styling for tables*/
             .table {
                 border-collapse: collapse;
-                width: 50%;
                 border: 1px solid;
             }
             .table th {
                 padding: 3px;
-                min-width: 100px;
                 border-right:1px solid;
                 border-bottom:1px solid;
             }
@@ -730,6 +728,8 @@ html, body {
                         margin-right :auto;
                         
                     }
+                }
+                
                     }
                 /*#endregion*/
             /*Mobile*/
@@ -746,6 +746,18 @@ html, body {
                 max-width: 50%;
                 max-height: 50%;
                 
+            }
+            #aboutTtimetable{
+                width:fit-content      
+                
+                
+            }
+            .table{
+                width: 30%;
+            }
+            .table th {
+                padding: 3px;
+                width: 70px;
             }
         }
 
