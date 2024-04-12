@@ -44,7 +44,7 @@
             <h1 id="enhancePageHeading" class="theme-dark heading">Website Enhancements</h1>
             <div id="enhancementsContainers">
             <div id="enhanceFontAwesomeContainer" class="glasspane">
-                <h1 class="theme-dark heading">Font Awesome Icons</h1>
+                <h2 class="theme-dark heading">Font Awesome Icons</h2>
                 <p>
                     <a class="theme-dark link" href="https://fontawesome.com/">Font Awesome</a> is an icon library availible for free for anyone to use.<br>
                     It is avialble under the <abbr>SIL Open Font License 1.1</abbr> (OFL) meaning 
@@ -82,7 +82,7 @@
                     </p>
             </div>
             <div id="enhanceBackgroundContainer" class="glasspane">
-                <h1 class="theme-light heading">Animated page background</h1>
+                <h2 class="theme-light heading">Animated page background</h2>
                 <section>
                     <p>The animated background implimented on all the pages goes beyond the simple plain background, 
                     or static image that this assignment requires. This extends the material covered in the topic 
@@ -120,6 +120,49 @@
                         }
                     </p>
                 </section>
+            </div>
+            <div id="enhanceGlitchContainer" class="glasspane">
+                <h2 class="theme-dark heading">Glitch effects</h2>
+                <p>
+                    The index page has a glitch effect theme.<br>
+                    This allows us to show that we are a tech Company, by implimenting tech styled effects.<br>
+                    These enhance the page as they allow the page to look more reactive and lively<br><br>
+                    These can be viewd on the <a class="theme-dark link" href="./index.html">Index Page</a><br><br>
+                    The glitch effect on the text is implimented by a <abbr>CSS</abbr> animation.
+                </p>
+                <p class="theme-dark code">
+                    .welcome-text h1:nth-child(2) {<br>
+                        &emsp;color: #ff00f2;<br>
+                        &emsp;animation: glitch2 3s infinite;<br>
+                    }<br>
+                    <br>    
+                    @keyframes glitch2 {<br>
+                        &emsp;0% {<br>
+                            &emsp;&emsp;display: none;<br>
+                            &emsp;}<br>
+                        <br>
+                        &emsp;40%{<br>
+                            &emsp;&emsp;transform: none;<br>
+                            &emsp;}<br>
+                        <br>
+                        &emsp;45% {<br>
+                            &emsp;&emsp;display: block;<br>
+                            &emsp;&emsp;transform: translate(5px,5px);<br>
+                            &emsp;}<br>
+                        <br>
+                        &emsp;75% {<br>
+                            &emsp;&emsp;transform: none;<br>
+                            &emsp;}<br>
+                        <br>
+                        &emsp;100% {<br>
+                            &emsp;&emsp;display: none;<br>
+                            &emsp;}<br>
+                    }<br>
+                </p>
+                <p>
+                    We create three copies of the text we wish to glitch<br>
+                    We then assign a colour and animation to two with will be the "glitch"
+                </p>
             </div>
             </div>
         </main>
