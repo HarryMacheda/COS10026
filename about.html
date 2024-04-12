@@ -1,61 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="description" content="Group information">
-        <meta name="keywords" content="Tech Company, Nebula, Space, Jobs, Software">
-        <meta name="author" content="Harry Macheda">
-        <title>About Us</title>
-        <link rel="icon" type="image/x-icon" href="./tiny_logo.png">
-        <link rel="stylesheet" href="./styles/style.css" />
-        <link rel="stylesheet" href="./styles/all.css" />
-        <meta name="theme-color" content="#F3F1DC"/> <!-- set the theme colour so mobile browsers set the background colour -->
-        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- set the viewport so we know the browsers width for mobile layouts -->
-    </head>
-    <body>
-        <nav>
-            <!-- Nav bar
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Group information" />
+    <meta
+      name="keywords"
+      content="Tech Company, Nebula, Space, Jobs, Software"
+    />
+    <meta name="author" content="Harry Macheda" />
+    <title>About Us</title>
+    <link rel="icon" type="image/x-icon" href="./tiny_logo.png" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/all.css" />
+    <meta name="theme-color" content="#F3F1DC" />
+    <!-- set the theme colour so mobile browsers set the background colour -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- set the viewport so we know the browsers width for mobile layouts -->
+  </head>
+  <body>
+    <nav>
+      <!-- Nav bar
               Each page has its own span
               Inside the span is another span with a font awesome icon
               This span is set to aria-hidden so it is ignored by screen readers
               We want to hide this as otherwise it will read both icon and link which is redundent
               Then we have a href with a link to the relevant page
             -->
-            <img src="./tiny_logo.png" alt="" />
-            <section id="navDesktop">
-              <span><span class="fa-solid fa-house" aria-hidden="true"></span><a href="./index.html">Home</a></span>
-              <span><span class="fa-solid fa-user-tie" aria-hidden="true"></span><a href="./jobs.html">Jobs</a></span>
-              <span><span class="fa-solid fa-file-contract" aria-hidden="true"></span><a href="./apply.html">Application</a></span>
-              <span><span class="fa-solid fa-people-group" aria-hidden="true"></span><a href="./about.html">About Us</a></span>
-              <span><span class="fa-solid fa-star" aria-hidden="true"></span><a href="./enhancements.html">Enhancements</a></span>
-            </section>
-            <section id="navMobile">
-              <span class="fa-solid fa-bars" aria-hidden="true" onclick=""></span>
-              <div>
-                <a href="./index.html"><span class="fa-solid fa-house" aria-hidden="true"></span>Home</a>
-                <a href="./jobs.html"><span class="fa-solid fa-user-tie" aria-hidden="true"></span>Jobs</a>
-                <a href="./apply.html"><span class="fa-solid fa-file-contract" aria-hidden="true"></span>Application</a>
-                <a href="./about.html"><span class="fa-solid fa-people-group" aria-hidden="true"></span>About Us</a>
-                <a href="./enhancements.html"><span class="fa-solid fa-star" aria-hidden="true"></span>Enhancements</a>
-              </div>
-            </section>
-          </nav>
-        <main>
+      <img src="./tiny_logo.png" alt="" />
+      <section id="navDesktop">
+        <span
+          ><span class="fa-solid fa-house" aria-hidden="true"></span
+          ><a href="./index.html">Home</a></span
+        >
+        <span
+          ><span class="fa-solid fa-user-tie" aria-hidden="true"></span
+          ><a href="./jobs.html">Jobs</a></span
+        >
+        <span
+          ><span class="fa-solid fa-file-contract" aria-hidden="true"></span
+          ><a href="./apply.html">Application</a></span
+        >
+        <span
+          ><span class="fa-solid fa-people-group" aria-hidden="true"></span
+          ><a href="./about.html">About Us</a></span
+        >
+        <span
+          ><span class="fa-solid fa-star" aria-hidden="true"></span
+          ><a href="./enhancements.html">Enhancements</a></span
+        >
+      </section>
+      <section id="navMobile">
+        <span class="fa-solid fa-bars" aria-hidden="true" onclick=""></span>
         <div>
-            <h1 class="theme-light heading">Group Information</h1>
-            <dl>
-                <dt class="theme-light heading">Group Name:</dt>
-                <dd class="theme-light paragraph">{group name}</dd>
-                <dt class="theme-light heading">Group ID:</dt>
-                <dd class="theme-light paragraph">{our group id}</dd>
-                <dt class="theme-light heading">Tutor</dt>
-                <dd class="theme-light paragraph">{tutors name}</dd>
-                <dt class="theme-light heading">Course:</dt>
-                <dd class="theme-light paragraph">{current Course}</dd>
-            </dl>
-            <h1 class="theme-light heading">Group Photo</h1>
-            <img src="groupphoto.png" alt="Photo of the group members">
-            <h1 class="theme-light heading">Timetable</h1>
+                    <a href="./index.html"
+            ><span class="fa-solid fa-house" aria-hidden="true"></span>Home</a
+          >
+          <a href="./jobs.html"
+            ><span class="fa-solid fa-user-tie" aria-hidden="true"></span
+            >Jobs</a
+          >
+          <a href="./apply.html"
+            ><span class="fa-solid fa-file-contract" aria-hidden="true"></span
+            >Application</a
+          >
+          <a href="./about.html"
+            ><span class="fa-solid fa-people-group" aria-hidden="true"></span
+            >About Us</a
+          >
+          <a href="./enhancements.html"
+            ><span class="fa-solid fa-star" aria-hidden="true"></span
+            >Enhancements</a
+          >
+        </div>
+      </section>
+      </nav>
+    <main>
+      <div>
+        <h1 class="theme-light heading">Group Information</h1>
+        <dl>
+          <dt class="theme-light heading">Group Name:</dt>
+          <dd class="theme-light paragraph">NEBULA</dd>
+          <dt class="theme-light heading">Group ID:</dt>
+          <dd class="theme-light paragraph">{our group id}</dd>
+          <dt class="theme-light heading">Tutor</dt>
+          <dd class="theme-light paragraph">{tutors name}</dd>
+          <dt class="theme-light heading">Course:</dt>
+          <dd class="theme-light paragraph">COS100026-Computing Technology Inquiry Project</dd>
+        </dl>
+        <h2 class="theme-light heading">Group Photo</h2>
+        <img src="groupphoto.png" alt="Photo of the group members" />
+         <h1 class="theme-light heading">Timetable</h1>
             <table id="aboutTtimetable" class="theme-dark table">
                 <tr>
                     <th></th>
@@ -94,8 +128,68 @@
                 <tr><td>9:00PM</td><td class="class-eee20006"></td><td></td><td></td><td></td><td></td></tr>
                 <tr><td>9:30PM</td><td></td><td></td><td></td><td></td><td></td></tr>
             </table>
-            <h1 class="theme-light heading">Group Profile</h1>
-            <h2>Harry Macheda</h2>
+        <table class="theme-light table">
+          <tr>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        <h2 class="theme-light heading">Group Profile</h2>
+        <p>
+          [group number] is made up of Harry, Nikki, Gabriel, and late addition
+          of Tristan who joined after a class cancellation. We have taken to
+          working together well with the establishment of a github to manage
+          website version control.
+        </p>
+        <br>
+        <br>
+        <br>
+        <h3>Harry Macheda</h2>
             <p>
                 Harry is 21 years old and completing a Bachelor of Engineering majoring in software,
                 he works as a software developer at Loop Software. In his spare time harry looks after
@@ -112,15 +206,88 @@
             <br>
             <br>
             <br>
-            <h3>Tristan Thorp</h3>
-            <p>I'm studying Computer Science with a double major in Software Developent and Cyber Security. I try to keep my timetable as slim as possible because I live in Gippsland so it takes me about 2 and a half hours to get to uni on any day I have classes. <br>I like to spend my free time playing video games and painting miniatures.</p>
-            <a href="mailto:{group email}">Email us here</a>
-        </div>
+        <h3>Nikki Ingkaninun</h3>
+        <p>
+          I'm doing Computer Science major in AI and minor in Software
+          Development. I'm into landscape film photography and music.
+        </p>
+        <h3>Tristan Thorp</h3>
+        <p>
+          I'm studying Computer Science with a double major in Software
+          Developent and Cyber Security. I try to keep my timetable as slim as
+          possible because I live in Gippsland so it takes me about 2 and a half
+          hours to get to uni on any day I have classes. I like to spend my free
+          time playing video games and painting miniatures.
+        </p>
+        <a href="mailto:{group email}">Email us here</a>
+      </div>
     </main>
-        <span class="circle fa-solid fa-star" id="circle_0_0"></span><span class="circle fa-solid fa-star" id="circle_0_1"></span><span class="circle fa-solid fa-star" id="circle_0_2"></span><span class="circle fa-solid fa-star" id="circle_0_3"></span><span class="circle fa-solid fa-star" id="circle_1_0"></span><span class="circle fa-solid fa-star" id="circle_1_1"></span><span class="circle fa-solid fa-star" id="circle_1_2"></span><span class="circle fa-solid fa-star" id="circle_1_3"></span><span class="circle fa-solid fa-star" id="circle_1_4"></span><span class="circle fa-solid fa-star" id="circle_2_0"></span><span class="circle fa-solid fa-star" id="circle_2_1"></span><span class="circle fa-solid fa-star" id="circle_2_2"></span><span class="circle fa-solid fa-star" id="circle_2_3"></span><span class="circle fa-solid fa-star" id="circle_3_0"></span><span class="circle fa-solid fa-star" id="circle_3_1"></span><span class="circle fa-solid fa-star" id="circle_3_2"></span><span class="circle fa-solid fa-star" id="circle_4_0"></span><span class="circle fa-solid fa-star" id="circle_4_1"></span><span class="circle fa-solid fa-star" id="circle_4_2"></span><span class="circle fa-solid fa-star" id="circle_4_3"></span><span class="circle fa-solid fa-star" id="circle_5_0"></span><span class="circle fa-solid fa-star" id="circle_5_1"></span><span class="circle fa-solid fa-star" id="circle_5_2"></span><span class="circle fa-solid fa-star" id="circle_5_3"></span><span class="circle fa-solid fa-star" id="circle_6_0"></span><span class="circle fa-solid fa-star" id="circle_6_1"></span><span class="circle fa-solid fa-star" id="circle_6_2"></span><span class="circle fa-solid fa-star" id="circle_7_0"></span><span class="circle fa-solid fa-star" id="circle_7_1"></span><span class="circle fa-solid fa-star" id="circle_7_2"></span><span class="circle fa-solid fa-star" id="circle_7_3"></span><span class="circle fa-solid fa-star" id="circle_8_0"></span><span class="circle fa-solid fa-star" id="circle_8_1"></span><span class="circle fa-solid fa-star" id="circle_8_2"></span><span class="circle fa-solid fa-star" id="circle_8_3"></span><span class="circle fa-solid fa-star" id="circle_8_4"></span><span class="circle fa-solid fa-star" id="circle_9_0"></span><span class="circle fa-solid fa-star" id="circle_9_1"></span><span class="circle fa-solid fa-star" id="circle_9_2"></span><span class="circle fa-solid fa-star" id="circle_9_3"></span><span class="circle fa-solid fa-star" id="circle_9_4"></span><span class="circle fa-solid fa-star" id="circle_10_0"></span><span class="circle fa-solid fa-star" id="circle_10_1"></span><span class="circle fa-solid fa-star" id="circle_10_2"></span><span class="circle fa-solid fa-star" id="circle_11_0"></span><span class="circle fa-solid fa-star" id="circle_11_1"></span><span class="circle fa-solid fa-star" id="circle_11_2"></span><span class="circle fa-solid fa-star" id="circle_12_0"></span><span class="circle fa-solid fa-star" id="circle_12_1"></span><span class="circle fa-solid fa-star" id="circle_12_2"></span><span class="circle fa-solid fa-star" id="circle_13_0"></span><span class="circle fa-solid fa-star" id="circle_13_1"></span><span class="circle fa-solid fa-star" id="circle_13_2"></span><span class="circle fa-solid fa-star" id="circle_13_3"></span><span class="circle fa-solid fa-star" id="circle_14_0"></span><span class="circle fa-solid fa-star" id="circle_14_1"></span><span class="circle fa-solid fa-star" id="circle_14_2"></span>
+    <span class="circle fa-solid fa-star" id="circle_0_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_0_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_0_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_0_3"></span
+    ><span class="circle fa-solid fa-star" id="circle_1_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_1_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_1_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_1_3"></span
+    ><span class="circle fa-solid fa-star" id="circle_1_4"></span
+    ><span class="circle fa-solid fa-star" id="circle_2_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_2_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_2_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_2_3"></span
+    ><span class="circle fa-solid fa-star" id="circle_3_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_3_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_3_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_4_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_4_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_4_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_4_3"></span
+    ><span class="circle fa-solid fa-star" id="circle_5_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_5_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_5_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_5_3"></span
+    ><span class="circle fa-solid fa-star" id="circle_6_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_6_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_6_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_7_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_7_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_7_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_7_3"></span
+    ><span class="circle fa-solid fa-star" id="circle_8_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_8_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_8_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_8_3"></span
+    ><span class="circle fa-solid fa-star" id="circle_8_4"></span
+    ><span class="circle fa-solid fa-star" id="circle_9_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_9_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_9_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_9_3"></span
+    ><span class="circle fa-solid fa-star" id="circle_9_4"></span
+    ><span class="circle fa-solid fa-star" id="circle_10_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_10_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_10_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_11_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_11_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_11_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_12_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_12_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_12_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_13_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_13_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_13_2"></span
+    ><span class="circle fa-solid fa-star" id="circle_13_3"></span
+    ><span class="circle fa-solid fa-star" id="circle_14_0"></span
+    ><span class="circle fa-solid fa-star" id="circle_14_1"></span
+    ><span class="circle fa-solid fa-star" id="circle_14_2"></span>
 
     <footer>
-
+      <p>Copyright &#169; 2024 NEBULA</p>
+      <div>
+        <a href="https://twitter.com/nebula2024">Twitter</a>
+        <a href="mailto:103603101@student.swin.edu.au">Email</a>
+        <a href="https://github.com/HarryMacheda/COS10026-Project">Github</a>
+        <a>👋</a>
+      </div>
     </footer>
-    </body>
+  </body>
 </html>
