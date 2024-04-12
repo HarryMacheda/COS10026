@@ -220,16 +220,40 @@ html, body {
     /*#region*/
         /*Common styling for tables*/
             .table {
+                border-collapse: collapse;
+                width: 50%;
                 border: 1px solid;
             }
             .table th {
-                border: 1px solid;
+                padding: 3px;
+                min-width: 100px;
+                border-right:1px solid;
+                border-bottom:1px solid;
             }
+            .table td {
+                text-align: center;
+                border:1px solid;
+                padding: 3px 3px 3px 3px;
+            }
+            .table tr td:first-child {
+                border-bottom:1px solid;
+            }
+
             /*theme stylings*/
             /*dark theme*/
                 .theme-dark.table{
-                    background-color: var(--theme-dark-alt);
                     color: var(--theme-text);
+                }
+                .theme-dark.table th{
+                    background-color: var(--theme-dark-alt);
+                }
+
+                .theme-dark.table tr td{
+                    background-color: var(--theme-white);
+                }
+
+                .theme-dark.table tr td:first-child {
+                    background-color: var(--theme-dark-alt);
                 }
     /*#endregion*/
     /* Glass Panes */
@@ -629,6 +653,26 @@ html, body {
         /*#endregion*/
     /*about.html*/
         /*#region*/
+            .class-cos10026 {
+                background-color: aqua !important;
+                border: none !important;
+                color: black;
+            }
+            .class-cos30008 {
+                background-color: brown !important;
+                border: none !important;
+                color: black;
+            }
+            .class-eee20006 {
+                background-color: greenyellow !important;
+                border: none !important;
+                color: black;
+            }
+            .class-cos40003 {
+                background-color: orange !important;
+                border: none !important;
+                color: black;
+            }
             /*Desktop*/
                 /*#region*/
                 /*#endregion*/
