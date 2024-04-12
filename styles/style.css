@@ -172,27 +172,18 @@ html, body {
     /* Text Displays */
     /*#region*/
         /*Common styling for headings*/
-            .heading {
-                
-            }
             /*theme stylings*/
             /*dark theme*/
                 .theme-dark.heading{
                     color: var(--theme-text);
                 }
         /*Common styling for paragraphs*/
-            .paragraph {
-
-            }
             /*theme stylings*/
             /*dark theme*/
                 .theme-dark.paragraph{
                     color: var(--theme-text);
                 }
         /*Common styling for labels*/
-            .label {
-
-            }
             /*theme stylings*/
             /*dark theme*/
                 .theme-dark.label{
