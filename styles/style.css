@@ -704,7 +704,7 @@ html, body {
             .class-cos30008 {
                 background-color: brown !important;
                 border: none !important;
-                color: black;
+                color: rgb(255, 253, 253);
             }
             .class-eee20006 {
                 background-color: greenyellow !important;
@@ -863,7 +863,7 @@ html, body {
         width: 57px;
     }
 
-    nav section {
+    nav div {
         margin: 10px;
         float: right;
         font-size: larger;
@@ -904,6 +904,12 @@ html, body {
         nav span {
             margin: 5px;
         }
+        #navDesktop div > a{
+            width: 150px;
+            height: 30px;
+            margin: 30px;
+            background-color: var(--theme-white);
+        }
     }
     /*Mobile layout*/
     @media screen and (max-width: 600px) {
@@ -913,7 +919,7 @@ html, body {
         #navMobile div > a{
             width: 150px;
             height: 30px;
-            margin: 0px;
+            margin: 10px;
             background-color: var(--theme-white);
         }
         nav span {
