@@ -95,7 +95,7 @@ html, body {
                         .theme-dark.inputdate{
                             background-color:  var(--theme-dark);
                             border-color: var(--theme-text);
-                            color: var(---theme-text);
+                            color: var(--theme-text);
                         }
             /*#endregion*/
         /*Selectables (checkbox, radio, drop downs, ect)*/
@@ -426,9 +426,7 @@ html, body {
         }
 
         .asideLinkList {
-            display: flexbox;
             position: fixed;
-            align-items: left;
             right: 1%;
             margin-left: 1%; 
             width: 25%; 
@@ -446,7 +444,7 @@ html, body {
         }
 
         .pencilcontainer {
-            display: flexbox;
+            display: flex;
             padding: 1%;
             position: fixed;
             right: 18%;
@@ -728,9 +726,8 @@ html, body {
                         margin-right :auto;
                         
                     }
-                }
                 
-                    }
+                }
                 /*#endregion*/
             /*Mobile*/
             @media screen and (max-width: 600px) {
