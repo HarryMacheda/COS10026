@@ -1,0 +1,35 @@
+Assignment part 2 Jobs
+1. Use php to resue elements
+ - Create a footer.php and include it on all pages to replace the footer element
+ - Create a nav.php and include it on all pages to replace the nav element
+ - Create a stars.php and include it on all pages to replace the stars
+
+2. Create a file to store database variables
+ - Create a settings.php file with our database info
+
+3. Database schema
+ - Create a schema to store job applications
+	- jobs listing
+	- skills
+	- responsibilities
+	- links between job and skills
+	- links between job and skills
+	- applicants
+	- links between applicants and skills
+ - Create Scripts to populate demo data
+	
+4. Update form to input data into the database
+ - Create a php page to post the application to
+ - Add validation on all form feilds
+ - Add code to insert into the database
+
+5. Hr manager queries
+ - Create a page with options to make the multiple queries
+ - For each option of query make sure they have the correct inputs and a submit button
+ - For each of the manager query options make a page which accepts any input from the page
+ - Display the results or edit the data accordingly
+
+6. Enhancments
+a. Dynamically render page based on job applications table
+b. Add security to manager page to validate against a username and password and look up from table
+c. Normalise database

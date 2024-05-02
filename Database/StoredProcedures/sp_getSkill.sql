@@ -1,0 +1,10 @@
+DROP PROCEDURE IF EXISTS sp_getSkill;
+DELIMITER //
+CREATE PROCEDURE sp_getSkill(
+    IN SkillId INT
+)
+BEGIN
+    SELECT name FROM JobSkills
+    WHERE Id = SkillId;
+END //
+DELIMITER ;
