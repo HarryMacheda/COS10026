@@ -78,11 +78,11 @@ class JobApplication {
         $ret = "";
         $ret.="<section class=\"glasspane jobsbox\" id=\"".$this->_reference."\">"
         ."<h2 class=\"theme-dark heading\">".$this->_title."</h2>"
-        ."<p class=\"theme-dark paragraph\">Position reference:".$this->_reference."</p>"
+        ."<p class=\"theme-dark paragraph\">Position reference: ".$this->_reference."</p>"
         ."<h3 class=\"theme-dark heading\">Position Description</h3>"
         ."<p class=\"theme-dark paragraph\">".$this->_description."</p>"
         ."<h3 class=\"theme-dark heading\">Position Salary</h3>"
-        ."<p class=\"theme-dark paragraph\">$".$this->_salaryLow."- $".$this->_salaryHigh."</p>";
+        ."<p class=\"theme-dark paragraph\">$".$this->_salaryLow." - $".$this->_salaryHigh."</p>";
 
         $ret.= "<h3 class=\"theme-dark heading\">Key Responsibilities</h3>"
         ."<ol class=\"theme-dark paragraph\">";

@@ -43,12 +43,25 @@
         <main>
             <h1 class="theme-dark heading" id="jobsPageHeading">Careers</h1>
 
-            <aside class="glasspane asideLinkList">
-                <p>Shortcuts</p>
-                <p><a class="theme-dark link" href="#LEDEV" >Lead Developer</a></p>
-                <p><a class="theme-dark link" href="#WBDEV">Web Developer</a></p>
-                <p><a class="theme-dark link" href="#HRREP">HR Representative</a></p>
-            </aside>
+            <?php 
+                require_once("settings.php");
+                require_once(dirname(__FILE__)."/PHP/JobApplication.php");
+
+                $query = "CALL sp_JobListings()";
+                $result = mysqli_query(Settings::SQLConnection(),$query);
+
+                echo "<aside class=\"glasspane asideLinkList\">"
+                ."<p>Shortcuts</p>";
+
+                while($row = mysqli_fetch_array($result)) {
+                    $Reference = $row["Reference"];
+                    $Title = $row["Title"];
+
+                    echo "<p><a class=\"theme-dark link\" href=\"#".$Reference."\" >". $Title."</a></p>";
+                }
+
+                echo "</aside>"
+            ?>
 
             <div class="jobscontainer">
                 <?php 
