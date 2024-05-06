@@ -78,7 +78,7 @@ class JobApplication {
         $ret = "";
         $ret.="<section class=\"glasspane jobsbox\" id=\"".$this->_reference."\">"
         ."<h2 class=\"theme-dark heading\">".$this->_title."</h2>"
-        ."<p class=\"theme-dark paragraph\">Position reference: ".$this->_reference."</p>"
+        ."<p class=\"theme-dark paragraph\">Position reference: <a class=\"theme-dark link\" href=\"./apply.php?ref=".$this->_reference."\">".$this->_reference."</a></p>"
         ."<h3 class=\"theme-dark heading\">Position Description</h3>"
         ."<p class=\"theme-dark paragraph\">".$this->_description."</p>"
         ."<h3 class=\"theme-dark heading\">Position Salary</h3>"

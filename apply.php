@@ -41,12 +41,25 @@
                   </div>
             </nav>
         <main>
+            <?php
+                $queries = array();
+                parse_str($_SERVER['QUERY_STRING'], $queries);
+                $JOB_REFERENCE = $queries["ref"];
+            ?>
             <h1 id="appplyPageHeading" class="theme-dark heading">Apply Here</h1>
             <div id="applyformcontainer">
                 <div class="glasspane">
                     <form id="applyForm" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
                         <label class="theme-dark label" for="reference">Job reference number: </label>
-                        <input class="theme-dark inputnumber" type="text" id="reference" name="reference" pattern="[0-9a-zA-Z]{5}" required="required"><br>
+                        <?php
+                            if($JOB_REFERENCE){
+                                echo "<input class=\"theme-dark inputnumber\" type=\"text\" id=\"reference\" name=\"reference\" pattern=\"[0-9a-zA-Z]{5}\" required=\"required\" value=\"$JOB_REFERENCE\"><br>";
+                            }
+                            else
+                            {
+                                echo "<input class=\"theme-dark inputnumber\" type=\"text\" id=\"reference\" name=\"reference\" pattern=\"[0-9a-zA-Z]{5}\" required=\"required\"><br>";
+                            }
+                        ?>
                         <label class="theme-dark label" for="firstname">First name: </label>
                         <input class="theme-dark inputtext" type="text" id="firstname" name="firstname" pattern="[a-zA-Z]{1,20}"  required="required"><br>
                         <label class="theme-dark label" for="surname">Surname: </label>
