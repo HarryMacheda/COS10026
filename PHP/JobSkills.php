@@ -1,14 +1,17 @@
 <?php
+require_once("Skill.php");
+
 class JobSkill {
     private $_skill;
     private $_isEssential;
-    private $_ListOrder;
 
-    public function __construct($skillId, $isEssential){
-        $skill = new Skill($skillId);
-        if($skill->Load(Settings::SQLConnection())){
-            $this->_skill = $skill;
-        }
+    public function isEssential() {
+        return $this->_isEssential;
+    }
+    public function __construct($skillId, $isEssential, $conn){
+        $this->_skill = new Skill($skillId);
+        $conn2 = Settings::SQLConnection();
+        $this->_skill->Load($conn2);
         $this->_isEssential = $isEssential;
     }
 
