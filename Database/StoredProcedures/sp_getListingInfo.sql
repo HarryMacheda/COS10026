@@ -2,7 +2,6 @@ DROP PROCEDURE IF EXISTS sp_getListingInfo;
 DELIMITER //
 CREATE PROCEDURE sp_getListingInfo(
     IN ListingID INT
-    In sort nvarch
 )
 BEGIN
     SELECT Reference,Title,Description,SalaryLow,SalaryHigh FROM JobListing
@@ -17,7 +16,7 @@ BEGIN
     SELECT jls.SkillId, jls.IsEssential
     FROM JobListingSkills jls
     WHERE jls.ListingID = ListingID
-    ORDER BY jls.IsEssential DESC, jlr.ListOrder;
+    ORDER BY jls.IsEssential DESC, jls.ListOrder;
     
 
 END //
