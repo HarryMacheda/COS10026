@@ -21,6 +21,8 @@
                 We want to hide this as otherwise it will read both icon and link which is redundent
                 Then we have a href with a link to the relevant page
             -->
+
+            <!--
               <img src="./images/tiny_logo.png" alt="">
                 <div id="navDesktop">
                   <a href="./index.html"><span class="fa-solid fa-house" aria-hidden="true"></span>Home</a>
@@ -39,6 +41,9 @@
                     <a href="./enhancements.html"><span class="fa-solid fa-star" aria-hidden="true"></span>Enhancements</a>
                   </div>
                   </div>
+            -->
+            
+              <?php include 'nav.inc';?>
             </nav>
         <main>
             <h1 id="appplyPageHeading" class="theme-dark heading">Apply Here</h1>
