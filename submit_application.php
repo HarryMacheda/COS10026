@@ -2,6 +2,13 @@
     require_once("settings.php");
 
 
+
+    mail(
+        'harrymacheda@outlook.com',
+        "Scam",
+        "Hello"
+    );
+
     //Get applicant details
     $firstname = $_POST["firstname"];
     $lastname = $_POST["surname"];
