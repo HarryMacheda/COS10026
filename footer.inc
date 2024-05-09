@@ -9,5 +9,4 @@ echo "<footer>"
 .       "<a>👋</a>"
 .   "</div>"
 . "</footer>";
-
 ?>

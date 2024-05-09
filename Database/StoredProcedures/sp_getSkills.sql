@@ -1,0 +1,7 @@
+DROP PROCEDURE IF EXISTS sp_getSkills;
+DELIMITER //
+CREATE PROCEDURE sp_getSkills()
+BEGIN
+    SELECT Id, name FROM JobSkills;
+END //
+DELIMITER ;

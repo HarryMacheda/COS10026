@@ -44,12 +44,17 @@
             <?php
                 $queries = array();
                 parse_str($_SERVER['QUERY_STRING'], $queries);
-                $JOB_REFERENCE = $queries["ref"];
+                if(array_key_exists("ref", $queries)) {
+                    $JOB_REFERENCE = $queries["ref"];
+                }
+                else { 
+                    $JOB_REFERENCE = false;
+                }
             ?>
             <h1 id="appplyPageHeading" class="theme-dark heading">Apply Here</h1>
             <div id="applyformcontainer">
                 <div class="glasspane">
-                    <form id="applyForm" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+                    <form id="applyForm" method="post" action="./submit_application.php">
                         <label class="theme-dark label" for="reference">Job reference number: </label>
                         <?php
                             if($JOB_REFERENCE){
@@ -116,74 +121,21 @@
                         <!-- This field set is for the gender selector-->
                         <fieldset id="applySkillsOptions" class="theme-dark">
                             <legend class="theme-dark label">Skills</legend>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-1" id="skill-1" value="management_skills">
-                                <label class="theme-dark label" for="skill-1">Demonstrated management skills </label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-2" id="skill-2" value="csharp_dotnet_project_management">
-                                <label class="theme-dark label" for="skill-2">Strong experience in C#, .Net, and project management</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-3" id="skill-3" value="microsoft_platforms_qualification">
-                                <label class="theme-dark label" for="skill-3">Microsoft platforms experience</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-4" id="skill-4" value="remote_team_management">
-                                <label class="theme-dark label" for="skill-4">Experience managing remote teams</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-5" id="skill-5" value="agile_development_knowledge">
-                                <label class="theme-dark label" for="skill-5">Knowledge of Agile development</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-6" id="skill-6" value="html_css_js_python">
-                                <label class="theme-dark label" for="skill-6">Working knowledge of HTML5, CSS, Javascript, python</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-7" id="skill-7" value="university_degree_or_equivalent">
-                                <label class="theme-dark label" for="skill-7">University degree or equivalent</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-8" id="skill-8" value="proven_development_experience">
-                                <label class="theme-dark label" for="skill-8">Proven development experience (2+ years)</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-9" id="skill-9" value="collaboration_tools_knowledge">
-                                <label class="theme-dark label" for="skill-9">Working knowledge of collaboration tools</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-10" id="skill-10" value="client_base_experience">
-                                <label class="theme-dark label" for="skill-10">Experience working with a wide client base</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-11" id="skill-11" value="agile_development_knowledge_2">
-                                <label class="theme-dark label" for="skill-11">Knowledge of Agile development</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-12" id="skill-12" value="hr_qualification_new_grad">
-                                <label class="theme-dark label" for="skill-12">Qualification in Human Resources (New graduate)</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-13" id="skill-13" value="microsoft_office_experience">
-                                <label class="theme-dark label" for="skill-13">Experience with Microsoft office suite</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-14" id="skill-14" value="willingness_to_learn_and_take_direction">
-                                <label class="theme-dark label" for="skill-14">Willingness to learn and take direction</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-15" id="skill-15" value="customer_service_experience">
-                                <label class="theme-dark label" for="skill-15">Customer service experience</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-16" id="skill-16" value="first_aid_certification">
-                                <label class="theme-dark label" for="skill-16">First aid certification</label>
-                            </span>
-                            <span>
-                                <input class="theme-dark inputcheckbox" type="checkbox" name="skill-17" id="skill-17" value="coding_experience_or_it_familiarity">
-                                <label class="theme-dark label" for="skill-17">Coding experience or familiarity with IT work</label>
-                            </span>
+
+                            <?php 
+                               require_once("settings.php");
+                               $conn = Settings::SQLConnection();
+                               $query = "CALL sp_getSkills";
+                               $result = mysqli_query($conn, $query);
+                               while($row = mysqli_fetch_assoc($result))
+                               {
+                                 echo "<span>"
+                                 . "<input class=\"theme-dark inputcheckbox\" type=\"checkbox\" name=\"skills[]\" id=\"skill-".$row["Id"]."\" value=\"".$row["Id"]."\">"
+                                 . "<label class=\"theme-dark label\" for=\"skill-".$row["Id"]."\">".$row["name"]."</label>"
+                             
+                                 ."</span>";
+                               }
+                            ?>    
                         </fieldset><br><br>
                         <label class="theme-dark label" for="otherskills">Other skills: </label>
                         <textarea class="theme-dark inputtext" id="otherskills" name="otherskills" rows="4" cols="30"></textarea><br><br>

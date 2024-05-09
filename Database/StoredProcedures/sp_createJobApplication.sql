@@ -8,7 +8,7 @@ CREATE PROCEDURE sp_createJobApplication (
 )
 BEGIN
     INSERT INTO JobApplications 
-    (Status, ListingId, ApplicantId, ApplicationDate)
+    (Status, JobListingId, ApplicantId, ApplicationDate)
     VALUES
     (Status, ListingId, ApplicantId, ApplicationDate);
 END //
