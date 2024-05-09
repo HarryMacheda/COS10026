@@ -1,13 +1,6 @@
 <?php
     require_once("settings.php");
-
-
-
-    mail(
-        'harrymacheda@outlook.com',
-        "Scam",
-        "Hello"
-    );
+    require_once(dirname(__FILE__)."/PHP/ApplicantEmail.php");
 
     //Get applicant details
     $firstname = $_POST["firstname"];
@@ -42,7 +35,6 @@
 
 
 
-    echo $query;
     $result = mysqli_query($conn, $query);
     mysqli_next_result($conn);
     $query = "SELECT @applicantID as ApplicantId";
@@ -85,6 +77,8 @@
             $result = mysqli_query($conn, $query);
             $conn->close();
         }
+
+        ApplicantEmail($applicantID, $listingId);
     }
 
 
