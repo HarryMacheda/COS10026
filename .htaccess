@@ -1,4 +1,8 @@
+require ldap-user s104901958
 require ldap-user s103603101
+require ldap-user s103536388
+require ldap-user s105341092
+
 require ldap-group cn=it_feenix_admin_convenor,ou=Group,ou=general,dc=feenix,dc=swin,dc=edu,dc=au
 require ldap-group cn=it_sdteam_convenor,ou=Group,ou=general,dc=feenix,dc=swin,dc=edu,dc=au
 require ldap-group cn=cos10026_convenor,ou=Group,ou=general,dc=feenix,dc=swin,dc=edu,dc=au
