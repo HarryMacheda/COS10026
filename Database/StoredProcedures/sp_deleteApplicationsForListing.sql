@@ -1,7 +1,10 @@
-DROP PROCEDURE IF EXISTS sp_getSkills;
+DROP PROCEDURE IF EXISTS sp_deleteApplicationsForListing;
 DELIMITER //
-CREATE PROCEDURE sp_getSkills()
+CREATE PROCEDURE sp_deleteApplicationsForListing(
+    IN listingid INT(4)
+)
 BEGIN
-    SELECT Id, name FROM JobSkills;
+    DELETE FROM JobApplications
+    WHERE JobListingId = listingid;
 END //
 DELIMITER ;
