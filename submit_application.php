@@ -2,6 +2,8 @@
     require_once("settings.php");
     require_once(dirname(__FILE__)."/PHP/ApplicantEmail.php");
 
+    session_start();
+
     //Get applicant details
     $firstname = $_POST["firstname"];
     $lastname = $_POST["surname"];
@@ -56,14 +58,18 @@
         $listingId = $row["Id"];
         $conn->close();
 
+        $uuid = uniqid();
+
         if (!$listingId) {echo "ERROR: Could not find job listing for reference: $reference";}
         else {
         $query = "CALL sp_createJobApplication("
-        ."0,"
+        ."0,'"
+        .$uuid."',"
         ."$applicantID,"
         ."$listingId,"
         ."'".date("Y-m-d h:i:s")."'"
         .");";
+        echo $query;
         $conn = Settings::SQLConnection();
         $result = mysqli_query($conn, $query);
         $conn->close();
@@ -78,7 +84,7 @@
             $conn->close();
         }
 
-        ApplicantEmail($applicantID, $listingId);
+        ApplicantEmail($applicantID, $listingId, $uuid);
     }
 
 
