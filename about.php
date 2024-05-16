@@ -42,7 +42,7 @@
                   </section>
                   <section id="aboutUsPhoto">
                       <h2 class="theme-light heading" id="groupPhotoHeading">Group Photo</h2>
-                      <img src="./images/groupphoto.png" id="groupPhoto" alt="Photo of the group members" >
+                      <img src="./images/groupPhoto.png" id="groupPhoto" alt="Photo of the group members" >
                   </section>
                 <section id="aboutUsTimeTable">
                 <h2 class="theme-light heading">Timetable</h2>
