@@ -15,16 +15,7 @@
     <!-- set the viewport so we know the browsers width for mobile layouts -->
   </head>
   <body>
-    <nav>
-      <!-- Nav bar
-          Each page has its own span
-          Inside the span is another span with a font awesome icon
-          This span is set to aria-hidden so it is ignored by screen readers
-          We want to hide this as otherwise it will read both icon and link which is redundent
-          Then we have a href with a link to the relevant page
-      -->
-            <?php include 'nav.inc';?>
-      </nav>
+      <?php include 'nav.inc';?>
       <main>
             <h1 class="theme-light heading" id="aboutUsHeading">About Us</h1>
                 <div class="glasspane aboutUsBox">
