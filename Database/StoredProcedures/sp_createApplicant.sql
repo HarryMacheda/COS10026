@@ -15,7 +15,7 @@ CREATE PROCEDURE sp_createApplicant(
     OUT ApplicantId INT
 )
 BEGIN
-    SELECT Id INTO ApplicantId 
+    SELECT Min(Id) INTO ApplicantId 
     FROM Applicants a
     WHERE a.Email = Email OR a.Phone = Phone;
 
