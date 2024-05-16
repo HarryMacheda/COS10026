@@ -33,7 +33,6 @@ function ApplicantEmail($applicantID, $listingId, $UniqueID){
     $MailHeaders  = "From: NoReply@Nebula.net.au\r\n";
     $MailHeaders .= "MIME-Version: 1.0\r\n";
     $MailHeaders .= "Content-Type: text/html; charset=UTF-8\r\n";
-    echo $ApplicantEmail;
     mail($ApplicantEmail,"Nebula Job Application", $message, $MailHeaders);
 }
 

@@ -16,16 +16,7 @@
   </head>
 
   <body>
-    <nav>
-      <!-- Nav bar
-          Each page has its own span
-          Inside the span is another span with a font awesome icon
-          This span is set to aria-hidden so it is ignored by screen readers
-          We want to hide this as otherwise it will read both icon and link which is redundent
-          Then we have a href with a link to the relevant page
-      -->
-       <?php include 'nav.inc';?>
-      </nav>
+    <?php include 'nav.inc';?>
     <main>
       <div class="logo">
         <img src="./images/main_logo.png" alt="Nebula Company Logo, a star surrounded by colourful rings above stylised text reading Nebula">
