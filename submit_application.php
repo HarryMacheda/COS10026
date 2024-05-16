@@ -3,17 +3,101 @@
     require_once(dirname(__FILE__)."/PHP/ApplicantEmail.php");
 
     //Get applicant details
-    $firstname = $_POST["firstname"];
-    $lastname = $_POST["surname"];
-    $dob = $_POST["dob"];
-    $gender = $_POST["gender"];
-    $address = $_POST["address"];
-    $suburb = $_POST["suburb"];
-    $state = $_POST["state"];
-    $postcode = $_POST["postcode"];
-    $email = $_POST["email"];
-    $phone = $_POST["phone"];
-    $otherSkills = $_POST["otherskills"];
+    $firstname = $lastname = $dob = $gender = $address = $suburb = $state = $postcode = $email = $phone = $otherSkills = "";
+    $firstnameErr = $lastnameErr = $dobErr = $genderErr = $addressErr = $suburbErr = $stateErr = $postcodeErr = $emailErr = $phoneErr = $otherSkillsErr ="";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        if (empty($firstname = $_POST["firstname"])) {
+            $firstnameErr = "Firstname is required";
+        } else {
+            $firstname = test_input($_POST["firstname"]);
+        
+        //check the name format
+        if (!preg_match("/^[a-zA-Z-' ]*$/", $firstname )){
+            $firstnameErr = "Only letters and white space allowed";
+            }
+        }
+        
+        if (empty($lastname = $_POST["lastname"])) {
+            $lastnameErr = "Lastname is required";
+        } else {
+            $lastname = test_input($_POST["lastname"]);
+        
+            //check the name format
+        if (!preg_match("/^[a-zA-Z-' ]*$/", $lastname )){
+            $lastnameErr = "Only letters and white space allowed";
+            }
+        }
+
+        if (empty($dob = $_POST["dob"])) {
+            $dobErr = "DOB is required";
+        } else {
+            $dob = test_input($_POST["dob"]);
+        }
+
+        if (empty($gender = $_POST["gender"])) {
+            $genderErr = "Gender is required";
+        } else {
+            $gender = test_input($_POST["gender"]);
+        }
+        
+        if (empty($address = $_POST["address"])) {
+            $addressErr = "Address is required";
+        } else {
+            $address = test_input($_POST["address"]);
+        }
+        
+        if (empty($suburb = $_POST["suburb"])) {
+            $suburbErr = "Suburb is required";
+        } else {
+            $suburb = test_input($_POST["suburb"]);
+        }
+
+        if (empty($state = $_POST["state"])) {
+            $stateErr = "State is required";
+        } else {
+            $state = test_input($_POST["state"]);
+        }
+
+        if (empty($postcode = $_POST["postcode"])) {
+            $postcodeErr = "Postcode is required";
+        } else {
+            $postcode = test_input($_POST["postcode"]);
+        }
+
+        if (empty($email = $_POST["email"])) {
+            $emailErr = "Email is required";
+        } else {
+            $email = test_input($_POST["email"]);
+        
+        //check the email format
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Invalid email format";
+            }
+        }
+
+        if (empty($phone = $_POST["phone"])) {
+            $phoneErr = "Phone number is required";
+        } else {
+            $phone = test_input($_POST["phone"]);
+        }
+
+        if (empty($otherSkills = $_POST["otherskills"])) {
+            $otherSkillsErr = "OtherSKills is required";
+        } else {
+            $otherSkills = test_input($_POST["otherskills"]);
+        }
+    }
+
+    function test_input ($input) {
+        $input = trim($input);
+        $input = str_replace("","", $input);
+        $input = preg_replace("","", $input);
+        $input = stripslashes($input);
+        $input = htmlspecialchars($input);
+
+        return $input;
+    }
 
 
     $applicantID = 0;
