@@ -1,14 +1,14 @@
 DROP PROCEDURE IF EXISTS sp_getApplicationsForApplicant;
 DELIMITER //
 CREATE PROCEDURE sp_getApplicationsForApplicant(
-    IN firstName VARCHAR(30),
-    IN lastName VARCHAR(30)
+    IN Applicant INT,
+    IN reference varchar(5)
 )
 BEGIN
-    SELECT DESTINCT JobApplications.JobListingId 
+    SELECT Status, ApplicationDate, JobListingId
     FROM JobApplications
-    JOIN Applicants ON JobApplications.ApplicantID = Applicants.ApplicantID
-    WHERE Applicants.FirstName = firstName OR ApplicantsLastName = lastName;
+	WHERE ApplicantId = Applicant
+    AND (reference = '' 
+    OR JobListingId IN (SELECT Id from JobListing WHERE Reference = reference));
 END //
 DELIMITER ;
-
