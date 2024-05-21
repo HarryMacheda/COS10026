@@ -5,7 +5,7 @@ require_once("Responsibility.php");
 
 class JobApplication {
     private static $_id;
-    private static $_title;
+    public static $_title;
     private static $_reference;
     private static $_description;
     private static $_salaryLow;

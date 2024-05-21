@@ -842,6 +842,54 @@ html, body {
                 }
                 /*#endregion*/
         /*#endregion*/
+        /*apply.html*/
+        /*#region*/
+                #managerContainer {
+                    width: 100%;
+                    justify-items: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                #managerContainer div{
+                    clear: both;
+                }
+
+
+                #managerContainer span {
+                    display: inline-block;
+                    width: 100%;
+                    padding-left: 20px;
+                    text-align: left;
+                    margin-top: 10px;
+                }
+
+                #managerContainer span > label {
+                    display: inline-block;
+                    min-width: 20%;
+                }
+            /*Desktop*/
+                /*#region*/
+                @media screen and (min-width: 600px) {
+                    #managerContainer div {
+                        width: 60%;
+                        padding: 5%;
+                        text-align: center;
+                    }
+                }
+                /*#endregion*/
+            /*Mobile*/
+                /*#region*/
+                @media screen and (max-width: 600px) {
+                    #managerContainer div {
+                        width: 60%;
+                        padding: 5%;
+                        text-align: center;
+                    }
+                }
+                /*#endregion*/
+        /*#endregion*/
 /*#endregion*/
 
 /*Styling for nav bar*/
