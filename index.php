@@ -61,7 +61,7 @@
         </h2>
       </div>
     </main>
-    <?php include 'background';?>
+    <?php include 'background.inc';?>
     <footer>
     <?php include 'footer.inc';?>
     </footer>

@@ -123,7 +123,7 @@
               <a class="theme-dark link" href="mailto:103603101@student.swin.edu.au">Email us here</a>
             </div>
       </main>
-    <?php include 'background';?>
+      <?php include 'background.inc';?>
 
     <footer>
       <?php include 'footer.inc';?>
