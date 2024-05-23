@@ -222,5 +222,8 @@
             ?>
         </main>
         <?php include 'background.inc';?>
+        <footer>
+            <?php include 'footer.inc';?>
+        </footer>
     </body>
 </html>
