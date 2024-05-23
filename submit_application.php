@@ -212,6 +212,12 @@
                     }
 
                     ApplicantEmail($applicantID, $listingId, $uuid);
+
+                    echo "<h1 id=\"jobsPageHeading\"> Application successful</h1>"
+                    ."<div class=\"jobscontainer\">"
+                    ."<section class=\"glasspane\">"
+                    ."<p style=\"padding: 5%;\">Thanks for your interest in working at Nebula, please check your email to confirm your application</p>"
+                    ."</div>";
                 }
             ?>
         </main>

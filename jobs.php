@@ -52,7 +52,7 @@
                     }
                 ?>
             </div>
-        <a class="applylink" href="apply.html">
+        <a class="applylink" href="apply.php">
             <span class="glasspane pencilcontainer" >
                 <em class="fa-solid fa-pencil fa-shake pencilicon" aria-hidden="true"></em>
                 <span class="joinUs">Sound great? Fill out our Application Form to apply now!</span>
