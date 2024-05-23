@@ -9,6 +9,7 @@ BEGIN
     SELECT DISTINCT A.Id, FirstName, LastName 
     FROM Applicants A
     LEFT OUTER JOIN JobApplications JA ON JA.ApplicantId = A.Id AND JA.Status > 0 
+    LEFT OUTER JOIN JobListing Jl ON Jl.Id = JA.JobListingId
     WHERE JA.JobListingId IS NOT NULL
     AND ( A.Id = Applicant
     OR (Applicant = 0 AND
@@ -19,7 +20,7 @@ BEGIN
         )
     )
     AND (reference = '' 
-    OR JobListingId IN (SELECT Id from JobListing WHERE Reference = reference));
+    OR Jl.Reference = reference)
     ORDER BY LastName,FirstName;
 END //
 DELIMITER ;

@@ -16,7 +16,6 @@
         <script>
             function onJobReferenceChange(){
                 const reference = document.getElementById("reference").value;
-                console.log(reference);
                 const button = document.getElementById("deleteButton");
                 if (reference == ""){
                     button.hidden = true;
@@ -29,6 +28,15 @@
             window.addEventListener('load', function () {
                 onJobReferenceChange();
             })
+
+            function Populatehiddenfields(application,status)
+            {
+                document.getElementById("hidUpdateApplicationId").value = application;
+                document.getElementById("hidUpdateStatus").value = status;
+                document.getElementById("hidUpdatePreviousCommand").value = document.getElementById("hidPrevCommand") ? document.getElementById("hidPrevCommand").value : "";
+                document.managerSubmitForm.submit();
+            }
+
         </script>
         <?php include 'nav.inc';?>
         <?php include_once("settings.php")?>
@@ -37,7 +45,10 @@
             <div id="managerContainer" >
                 <div class="glasspane">
                     <section id="managerForm">
-                        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <form name="managerSubmitForm" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                            <input id="hidUpdateApplicationId" name="hidUpdateApplicationId" type="text" value="" hidden>
+                            <input id="hidUpdateStatus" name="hidUpdateStatus" type="text" value="" hidden>
+                            <input id="hidUpdatePreviousCommand" name="hidUpdatePreviousCommand" type="text" value="" hidden>
                             <fieldset>
                                 <legend class="theme-dark label">Search Options</legend>
                                 
@@ -113,7 +124,7 @@
                         </form>
                     </section>
                     <section id="managerResults">
-                        <h2 class="theme-dark heading">Results</h2>
+                        <h2 class="theme-dark label">Search Results</h2>
                         <?php 
                             require_once(dirname(__FILE__)."/PHP/ManagerQueries.php");
                             ManagerQueriesResults()

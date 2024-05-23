@@ -259,10 +259,13 @@ html, body {
 
                 .theme-dark.table tr td{
                     background-color: var(--theme-white);
+                    color: var(--theme-highlight);
                 }
 
                 .theme-dark.table tr td:first-child {
                     background-color: var(--theme-dark-alt);
+                    color: var(--theme-text);
+
                 }
     /*#endregion*/
     /* Glass Panes */
