@@ -17,6 +17,13 @@
   <body>
       <?php include 'nav.inc';?>
       <main>
+        <div class="glasspane">
+                    <section id="Application Confirmation">
+                        <h1>Thank you for your application!</h1>
+                        <h2>We will get back to you shortly</h2>
+                    </section>
+          </div>
+
         <?php
             require_once("settings.php");
             $queries = array();
