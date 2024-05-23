@@ -201,5 +201,6 @@
 
             ?>
         </main>
+        <?php include 'background.inc';?>
     </body>
 </html>
