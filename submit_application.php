@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
       <meta charset="UTF-8">
-      <meta name="description" content="Available jobs page for Nebula">
+      <meta name="description" content="Job submission page for Nebula">
       <meta name="keywords" content="Tech Company, Nebula, Space, Jobs, Software">
       <meta name="author" content="Tristan Thorp">
-      <title>404 Not Found</title>
+      <title>Application Submission</title>
       <link rel="icon" type="image/x-icon" href="./tiny_logo.png">
       <link rel="stylesheet" href="./styles/style.css" />
       <link rel="stylesheet" href="./styles/all.css" />
