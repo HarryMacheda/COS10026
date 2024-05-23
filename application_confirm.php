@@ -17,6 +17,16 @@
   <body>
       <?php include 'nav.inc';?>
       <main>
+        <div id="applicationConfirmContainer">
+        <h1 id="jobsPageHeading">Thank you for confirming your application!</h1>
+          <div class="jobscontainer">
+                    <section id="Application Confirmation" class= "glasspane">
+                      
+                        <p style= "padding:70px 80px;" style= "text-align:center;">We will get back to you shortly</p>
+                      
+                    </section>
+                  </div>
+        </div>
         <?php
             require_once("settings.php");
             $queries = array();
@@ -36,13 +46,11 @@
                   $query = "CALL sp_updateJobApplication(0,\"$token\",1)";
 
                   $result = mysqli_query($conn, $query);
-            
-                  echo "<p>Thank you for confirming your application</p>"
-                  ."<p>You will here back from us shortly</p>";
+    
                 }
         ?>
         </main>
-        <?php include 'background.inc';?>
+      <?php include 'background.inc';?>
       <footer>
       <?php include 'footer.inc';?>
     </footer>
