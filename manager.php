@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Job application page for Nebula">
+        <meta name="description" content="HR manager queries page for Nebula">
         <meta name="keywords" content="Tech Company, Nebula, Space, Jobs, Software">
         <meta name="author" content="Harry Macheda">
-        <title>Job Application</title>
+        <title>Manager Queries</title>
         <link rel="icon" type="image/x-icon" href="./images/tiny_logo.png">
         <link rel="stylesheet" href="./styles/style.css">
         <link rel="stylesheet" href="./styles/all.css">
