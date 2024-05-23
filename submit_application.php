@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
       <meta charset="UTF-8">
-      <meta name="description" content="Available jobs page for Nebula">
+      <meta name="description" content="Job submission page for Nebula">
       <meta name="keywords" content="Tech Company, Nebula, Space, Jobs, Software">
       <meta name="author" content="Tristan Thorp">
-      <title>404 Not Found</title>
+      <title>Application Submission</title>
       <link rel="icon" type="image/x-icon" href="./tiny_logo.png">
       <link rel="stylesheet" href="./styles/style.css" />
       <link rel="stylesheet" href="./styles/all.css" />
@@ -24,8 +24,11 @@
     $firstnameErr = $lastnameErr = $dobErr = $genderErr = $addressErr = $suburbErr = $stateErr = $postcodeErr = $emailErr = $phoneErr = $otherSkillsErr ="";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($firstname = $_POST["firstname"])) {
+        
+        if (empty($_POST["firstname"])) {
             $firstnameErr = "Firstname is required";
+        //if (empty($firstname = $_POST["firstname"])) {
+        //    $firstnameErr = "Firstname is required";
         } else {
             $firstname = test_input($_POST["firstname"]);
         
@@ -35,8 +38,10 @@
             }
         }
         
-        if (empty($lastname = $_POST["lastname"])) {
+        if (empty($_POST["lastname"])) {
             $lastnameErr = "Lastname is required";
+        //if (empty($lastname = $_POST["lastname"])) {
+        //    $lastnameErr = "Lastname is required";
         } else {
             $lastname = test_input($_POST["lastname"]);
         
@@ -46,43 +51,52 @@
             }
         }
 
-        if (empty($dob = $_POST["dob"])) {
+        if (empty($_POST["dob"])) {
             $dobErr = "DOB is required";
+        //if (empty($dob = $_POST["dob"])) {
+        //    $dobErr = "DOB is required";
         } else {
             $dob = test_input($_POST["dob"]);
         }
 
-        if (empty($gender = $_POST["gender"])) {
+        if (empty($_POST["gender"])) {
             $genderErr = "Gender is required";
+        //if (empty($gender = $_POST["gender"])) {
+        //    $genderErr = "Gender is required";
         } else {
             $gender = test_input($_POST["gender"]);
         }
         
-        if (empty($address = $_POST["address"])) {
+        if (empty($_POST["address"])) {
+        //if (empty($address = $_POST["address"])) {
             $addressErr = "Address is required";
         } else {
             $address = test_input($_POST["address"]);
         }
         
-        if (empty($suburb = $_POST["suburb"])) {
+        if (empty($_POST["suburb"])) {
+        //if (empty($suburb = $_POST["suburb"])) {
             $suburbErr = "Suburb is required";
         } else {
             $suburb = test_input($_POST["suburb"]);
         }
 
-        if (empty($state = $_POST["state"])) {
+        if (empty($_POST["state"])) {
+        //if (empty($state = $_POST["state"])) {
             $stateErr = "State is required";
         } else {
             $state = test_input($_POST["state"]);
         }
 
-        if (empty($postcode = $_POST["postcode"])) {
+        if (empty($_POST["postcode"])) {
+        //if (empty($postcode = $_POST["postcode"])) {
             $postcodeErr = "Postcode is required";
         } else {
             $postcode = test_input($_POST["postcode"]);
         }
 
-        if (empty($email = $_POST["email"])) {
+        if (empty($_POST["email"])) {
+        //if (empty($email = $_POST["email"])) {
             $emailErr = "Email is required";
         } else {
             $email = test_input($_POST["email"]);
@@ -93,13 +107,15 @@
             }
         }
 
-        if (empty($phone = $_POST["phone"])) {
+        if (empty($_POST["phone"])) {
+        //if (empty($phone = $_POST["phone"])) {
             $phoneErr = "Phone number is required";
         } else {
             $phone = test_input($_POST["phone"]);
         }
 
-        if (empty($otherSkills = $_POST["otherskills"])) {
+        if (empty($_POST["otherskills"])) {
+        //if (empty($otherSkills = $_POST["otherskills"])) {
             $otherSkillsErr = "OtherSKills is required";
         } else {
             $otherSkills = test_input($_POST["otherskills"]);
@@ -108,8 +124,8 @@
 
     function test_input ($input) {
         $input = trim($input);
-        $input = str_replace("","", $input);
-        $input = preg_replace("","", $input);
+        //$input = str_replace("","", $input);
+        //$input = preg_replace("","", $input);
         $input = stripslashes($input);
         $input = htmlspecialchars($input);
 

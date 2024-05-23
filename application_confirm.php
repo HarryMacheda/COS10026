@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" >
-    <meta name="description" content="Group information" >
+    <meta name="description" content="Apllication confirming page for Nebula" >
     <meta name="keywords" content="Tech Company, Nebula, Space, Jobs, Software">
     <meta name="author" content="Harry Macheda">
-    <title>About Us</title>
+    <title>Application Confirmation</title>
     <link rel="icon" type="image/x-icon" href="./tiny_logo.png" >
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/all.css">
