@@ -197,8 +197,6 @@
 
                     ApplicantEmail($applicantID, $listingId, $uuid);
                 }
-
-
             ?>
         </main>
         <?php include 'background.inc';?>
