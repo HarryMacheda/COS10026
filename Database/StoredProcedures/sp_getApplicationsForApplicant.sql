@@ -5,10 +5,11 @@ CREATE PROCEDURE sp_getApplicationsForApplicant(
     IN reference varchar(5)
 )
 BEGIN
-    SELECT Status, ApplicationDate, JobListingId
-    FROM JobApplications
+    SELECT ja.Id,Status, ApplicationDate, JobListingId
+    FROM JobApplications ja 
+    INNER JOIN JobListing jl on ja.JobListingId = jl.Id
 	WHERE ApplicantId = Applicant
     AND (reference = '' 
-    OR JobListingId IN (SELECT Id from JobListing WHERE Reference = reference));
+    OR jl.Reference = reference);
 END //
 DELIMITER ;

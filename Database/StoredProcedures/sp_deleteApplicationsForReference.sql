@@ -4,7 +4,9 @@ CREATE PROCEDURE sp_deleteApplicationsForReference(
     IN reference varchar(5)
 )
 BEGIN
-    DELETE FROM JobApplications
-    WHERE JobListingId IN (SELECT ListingId from JobListings WHERE Reference = reference);
+    DELETE ja
+    FROM JobApplications ja
+    inner join JobListing jl on ja.JobListingId = jl.Id
+    WHERE jl.Reference = reference;
 END //
 DELIMITER ;
