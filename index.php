@@ -61,10 +61,10 @@
         </h2>
 
         <h2> Our capabable team offer quality advertising services for organizations 
-          of any size!, we garuntee a great turn out, with service packages that suit your needs! <h2>
+          of any size!, we garuntee a great turn out, with service packages that suit your needs! </h2>
           
          <h2> We provide great value services starting at $5000 to $100,000 per month,
-          ensuring flexible pricing for excellent results. <h2>
+          ensuring flexible pricing for excellent results. </h2>
       </div>
     </main>
     <?php include 'background.inc';?>
