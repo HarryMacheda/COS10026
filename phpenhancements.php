@@ -26,20 +26,17 @@
                         <h3 class="theme-light heading">Normalising the database</h3>
                         The first step in loading the pages from the database was to normalise the schema, 
                         by creating tables to split where the data of the job listing is stored.
-                        <br>
-                        <dl>
-                            <dt>Job Listings</dt>
-                                <dd>Stores the information about the job listing, ie reference, title, salary, ect</dd>
-                            <dt>Job Skills</dt>
-                                <dd>Stores skills a job could have both essential and recommended.</dd>
-                            <dt>Job Listing Skills</dt>
-                                <dd>Stores the link between a job listing and its skills</dd>
-                            <dt>Job Resposibilities</dt>
-                                <dd>Stores the resposibilities a job could have</dd>
-                            <dt>Job Listing Resposibilities</dt>
-                                <dd>Stores the link between a job listing and its responsibilities</dd>
-                        </dl>
-                        <br>
+                        <br><br>
+                        <span>Job Listings:  Stores the information about the job listing, ie reference, title, salary, ect</span>
+                        <br><br>
+                        <span>Job Skills:  Stores skills a job could have both essential and recommended.</span>
+                        <br><br>
+                        <span>Job Listing Skills:  Stores the link between a job listing and its skills.</span> 
+                        <br><br>   
+                        <span>Job Resposibilities:  Stores the resposibilities a job could have.</span>    
+                        <br><br>
+                        <span>Job Listing Resposibilities:  Stores the link between a job listing and its responsibilities</span>    
+                        <br><br>
                         Having the database be normalised allows us to store a variable amount of skills and 
                         resposibilities for each job rather than limiting to a fixed number.
                         <br>

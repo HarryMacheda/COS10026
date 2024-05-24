@@ -20,35 +20,38 @@
         <div id="applicationConfirmContainer">
         <h1 id="jobsPageHeading">Thank you for confirming your application!</h1>
           <div class="jobscontainer">
-                    <section id="Application Confirmation" class= "glasspane">
+              <section id="Application Confirmation" class= "glasspane">
                       
-                        <p style= "padding:70px 80px;" style= "text-align:center;">We will get back to you shortly</p>
                       
-                    </section>
-                  </div>
+                  <?php
+                      require_once("settings.php");
+                      $queries = array();
+                          parse_str($_SERVER['QUERY_STRING'], $queries);
+                          if(array_key_exists("token", $queries)) {
+                              $token = $queries["token"];
+                          }
+                          else { 
+                              $token = "";
+                          }
+
+                          if($token == "") {
+                            echo "<p> ERROR: Link provided is invalid.</p>";
+                          }
+                          else {
+                            $conn = Settings::SQLConnection();
+                            $query = "CALL sp_updateJobApplication(0,\"$token\",1)";
+
+                            $result = mysqli_query($conn, $query);
+                            
+                            echo "<p style=\"padding:70px 80px;\" style=\"text-align:center;\">"
+                            ."We will get back to you shortly!<br>"
+                            ."Feel free to keep applying <a class=\"theme-dark link\" href=\"./apply.php\">here.</a>"
+                            ."</p>";
+                          }
+                  ?>
+                </section>
+            </div>
         </div>
-        <?php
-            require_once("settings.php");
-            $queries = array();
-                parse_str($_SERVER['QUERY_STRING'], $queries);
-                if(array_key_exists("token", $queries)) {
-                    $token = $queries["token"];
-                }
-                else { 
-                    $token = "";
-                }
-
-                if($token == "") {
-                  echo "<p> ERROR: Link provided is invalid.</p>";
-                }
-                else {
-                  $conn = Settings::SQLConnection();
-                  $query = "CALL sp_updateJobApplication(0,\"$token\",1)";
-
-                  $result = mysqli_query($conn, $query);
-    
-                }
-        ?>
         </main>
       <?php include 'background.inc';?>
       <footer>

@@ -34,7 +34,7 @@
                   <section id="aboutUsPhoto">
                       <h2 class="theme-light heading" id="groupPhotoHeading">Group Photo</h2>
                       <img src="./images/groupPhoto.png" id="groupPhoto" alt="Photo of the group members" >
-                  <p> (Photo above shows founding members of NEBULA, Tristan Thorp, Harry Macheda, Gabriel Stingas and Nikki Ingkaninun) Taken: 2024
+                  <p> (Photo above shows founding members of NEBULA, Tristan Thorp, Harry Macheda, Gabriel Stingas and Nikki Ingkaninun) Taken: 2024</p>
                   </section>
                 <section id="aboutUsTimeTable">
                 <h2 class="theme-light heading">Timetable</h2>
