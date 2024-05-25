@@ -106,7 +106,7 @@ class JobApplication {
         }
 
         if(count($this->_nonEssential) > 0){
-            $ret.= "<h4 class=\"theme-dark heading\">Essential</h4>"
+            $ret.= "<h4 class=\"theme-dark heading\">Preferable</h4>"
             ."<ul class=\"theme-dark paragraph\">";
             foreach ($this->_nonEssential as $x) {
                 $ret.=$x->ToHtml();
