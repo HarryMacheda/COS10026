@@ -72,7 +72,7 @@
                         <label class="theme-dark label" for="address">Address: </label>
                         <input class="theme-dark inputtext" type="text" id="address" name="address" pattern="[0-9a-zA-Z\s]{1,40}" required="required"><br>
                         <label class="theme-dark label" for="suburb">Suburb/Town: </label>
-                        <input class="theme-dark inputtext" type="text" id="suburb" name="suburb" pattern="[0-9a-zA-Z]{1,40}" required="required"><br>
+                        <input class="theme-dark inputtext" type="text" id="suburb" name="suburb" pattern="[0-9a-zA-Z\s]{1,40}" required="required"><br>
                         <label class="theme-dark label" for="state">State</label>
                         <select class="theme-dark select" id="state" name="state"  required="required">
                             <option class="theme-dark option" value="">Please Select</option>
