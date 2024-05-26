@@ -945,7 +945,7 @@ html, body {
     #navMobile:hover div,  #navMobile:active div {
         display: block;
         position: absolute;
-        left: calc(100% - 150px);
+        left: calc(100% - 250px);
         padding-bottom: 5px;
     }
     /*Desktop layout*/
@@ -969,9 +969,8 @@ html, body {
             display: none;
         }
         #navMobile div > a{
-            width: 150px;
-            height: 30px;
-            margin: 10px;
+            width: 250px;
+            height: 50px;
             background-color: var(--theme-white);
         }
         nav span {
